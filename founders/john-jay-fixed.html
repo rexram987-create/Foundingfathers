@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ג'ון ג'יי - מורשת ארה"ב</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800&family=Frank+Ruhl+Libre:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root { --primary-blue:#3b82f6; --dark-bg:#020617; --card-bg:#0f172a; }
+    body { font-family:'Assistant',sans-serif; background:var(--dark-bg); color:#e2e8f0; margin:0; line-height:1.85; }
+    h1,h2,h3 { font-family:'Frank Ruhl Libre',serif; }
+    .main-header { background:#0f172a; border-bottom:2px solid #1e293b; padding:2.5rem 1rem; text-align:center; }
+    .nav-container { display:flex; flex-wrap:wrap; justify-content:center; gap:1rem; margin-top:1.5rem; }
+    .nav-link { padding:.8rem 1.5rem; font-weight:700; color:#94a3b8; border-radius:1rem; background:rgba(30,41,59,.5); border:1px solid #1e293b; text-decoration:none; transition:.3s; }
+    .nav-link:hover,.nav-link.active { color:white; background:var(--primary-blue); box-shadow:0 4px 15px rgba(59,130,246,.3); }
+    .section-card { background:var(--card-bg); border:1px solid #1e293b; border-radius:2rem; padding:2rem; margin-bottom:2rem; }
+    .portrait { width:100%; max-height:620px; object-fit:cover; object-position:top; border-radius:2rem; border:1px solid #334155; cursor:zoom-in; }
+    .credit { color:#64748b; font-size:.85rem; margin-top:.75rem; }
+    .info-grid { display:grid; grid-template-columns:1fr; gap:1rem; }
+    @media(min-width:768px){ .info-grid{ grid-template-columns:repeat(2,1fr);} }
+    .info-box { background:rgba(30,41,59,.55); border:1px solid #1e293b; border-radius:1.25rem; padding:1.25rem; }
+    .quote-box { background:rgba(59,130,246,.08); border-right:5px solid var(--primary-blue); border-radius:0 1rem 1rem 0; padding:1.5rem; color:#cbd5e1; font-style:italic; }
+    .highlight-box { background:rgba(59,130,246,.1); border:1px solid rgba(59,130,246,.25); border-radius:1.5rem; padding:1.5rem; }
+    #imageModal { display:none; position:fixed; inset:0; background:rgba(2,6,23,.97); z-index:2000; justify-content:center; align-items:center; padding:2rem; }
+    #imageModal img { max-width:95vw; max-height:90vh; border-radius:1rem; }
+  </style>
+</head>
+<body>
+<header class="main-header">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex justify-center items-center gap-4 mb-2"><div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center font-bold text-white text-lg">US</div><h1 class="text-3xl md:text-4xl font-bold text-white">מורשת ארה"ב</h1></div>
+    <nav class="nav-container"><a href="../index.html" class="nav-link">דף הבית</a><a href="../founders-index.html" class="nav-link active">אבות מייסדים</a><a href="../constitution.html" class="nav-link">חוקת ארה"ב</a><a href="../timeline.html" class="nav-link">ציר זמן</a><a href="../us-flag.html" class="nav-link">דגל ארה"ב</a><a href="../anthem.html" class="nav-link">ההמנון הלאומי</a><a href="../about.html" class="nav-link">קצת עליי</a></nav>
+  </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-6 py-14">
+  <a href="../founders-index.html" class="text-blue-400 font-bold hover:text-blue-300">← חזרה לשער האבות המייסדים</a>
+
+  <section class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start mt-8 mb-12">
+    <div>
+      <p class="text-blue-400 font-bold tracking-widest uppercase">נשיא בית המשפט העליון הראשון ודיפלומט</p>
+      <h2 class="text-5xl md:text-7xl font-bold text-white mb-6">ג'ון ג'יי</h2>
+      <p class="text-2xl text-slate-400 italic">John Jay</p>
+      <p class="text-xl text-slate-300 mt-6">משפטן, דיפלומט ומדינאי, ממחברי כתבי הפדרליסט ומי שכיהן כנשיא בית המשפט העליון הראשון של ארצות הברית.</p>
+      <div class="quote-box mt-8">"ג'יי ייצג את הצד המשפטי והדיפלומטי של דור המייסדים: בניית מדינה שאינה נשענת רק על כוח צבאי, אלא גם על חוק, הכרה בינלאומית ומוסדות שיפוטיים."</div>
+    </div>
+    <div>
+      <img onclick="openModal(this.src)" src="../assets/images/founders/john-jay.jpg" alt="ג'ון ג'יי" class="portrait">
+      <p class="credit">מקור התמונה: Wikimedia Commons · נחלת הכלל · צייר: Gilbert Stuart · קובץ מקור: John Jay (cropped).jpg</p>
+    </div>
+  </section>
+
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">פרטים בסיסיים</h3><div class="info-grid"><div class="info-box"><strong class="text-blue-400">שם מלא בעברית:</strong> ג'ון ג'יי</div><div class="info-box"><strong class="text-blue-400">שם מלא באנגלית:</strong> John Jay</div><div class="info-box"><strong class="text-blue-400">לידה:</strong> 12 בדצמבר 1745, ניו יורק, מושבת ניו יורק</div><div class="info-box"><strong class="text-blue-400">פטירה:</strong> 17 במאי 1829, בדפורד, ניו יורק</div><div class="info-box"><strong class="text-blue-400">תפקידים מרכזיים:</strong> נשיא הקונגרס הקונטיננטלי, דיפלומט, ממחברי כתבי הפדרליסט, נשיא בית המשפט העליון הראשון, מושל ניו יורק</div><div class="info-box"><strong class="text-blue-400">כינוי היסטורי:</strong> אדריכל המשפט והדיפלומטיה של הרפובליקה</div></div></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">אטימולוגיה ופירוק השם</h3><p><strong class="text-blue-400">John:</strong> מקורו בשם העברי <em>יוחנן</em>, שמשמעותו "האל חנן" או "האל העניק חסד".</p><p class="mt-4"><strong class="text-blue-400">Jay:</strong> שם משפחה אנגלי קצר, ובמקרה של משפחת ג'יי קשור למשפחה ממוצא הוגנוטי־צרפתי שהתבססה בניו יורק.</p></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">ילדות ומשפחה</h3><p>ג'ון ג'יי נולד למשפחה ניו־יורקית בולטת שמוצאה בחלקו הוגנוטי — פרוטסטנטים צרפתים שנמלטו מרדיפות דתיות באירופה.</p><p class="mt-4">הוא נישא לשרה ליווינגסטון, בת למשפחה פוליטית חשובה, קשר שחיזק את מעמדו בתוך האליטה של ניו יורק והמהפכה.</p></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">השכלה והכשרה משפטית</h3><p>ג'יי למד בקינג'ס קולג' בניו יורק, לימים אוניברסיטת קולומביה, והוכשר כעורך דין. הכשרתו המשפטית עיצבה את דרך חשיבתו: סדר, מוסדות, יציבות, חוקיות והמשכיות מדינית.</p></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">פעילות לפני ובמהלך המהפכה</h3><p>בשלבים הראשונים של הסכסוך עם בריטניה ג'יי קיווה להסדר שיגן על זכויות המושבות בתוך האימפריה. אולם ככל שהמשבר העמיק, עבר לתמיכה בעצמאות ובבניית מוסדות אמריקאיים נפרדים.</p><p class="mt-4">הוא השתתף בקונגרס הקונטיננטלי ושימש בתפקידים פוליטיים חשובים, כולל נשיא הקונגרס הקונטיננטלי.</p></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">דיפלומטיה וחוזה פריז</h3><p>אחת מתרומותיו החשובות ביותר של ג'יי הייתה בתחום הדיפלומטי. הוא שירת בשליחויות באירופה והיה ממנהלי המשא ומתן שהוביל לחוזה פריז בשנת 1783, שבו הכירה בריטניה בעצמאות ארצות הברית.</p><div class="highlight-box mt-6"><strong class="text-blue-400">חשיבות חוזה פריז:</strong> ההסכם העניק לארצות הברית הכרה רשמית בעצמאותה וקבע גבולות רחבים, מנהר המיסיסיפי ועד האוקיינוס האטלנטי.</div></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">כתבי הפדרליסט והמאבק לאשרור החוקה</h3><p>ג'יי הצטרף לאלכסנדר המילטון ולג'יימס מדיסון בכתיבת "כתבי הפדרליסט". בשל מחלה כתב מספר קטן יחסית של מאמרים, אך תרומתו הייתה חשובה במיוחד בנושאי מדיניות חוץ, ביטחון לאומי ואחדות האיחוד.</p></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">נשיא בית המשפט העליון הראשון</h3><p>בשנת 1789 מונה ג'יי לנשיא בית המשפט העליון הראשון של ארצות הברית. תפקיד זה היה חדש לחלוטין, וג'יי סייע לעצב את דמותה הראשונית של הרשות השופטת הפדרלית.</p></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">הסכם ג'יי עם בריטניה</h3><p>בשנות התשעים של המאה ה־18 נשלח ג'יי לבריטניה כדי לפתור מתיחויות שנותרו לאחר מלחמת העצמאות. התוצאה הייתה הסכם ג'יי, שנחתם בשנת 1794 ונועד למנוע מלחמה עם בריטניה.</p><p class="mt-4">ההסכם היה שנוי במחלוקת חריפה, אך מבחינה אסטרטגית איפשר לארצות הברית להרוויח זמן, להימנע ממלחמה ולחזק את כלכלתה.</p></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">מושל ניו יורק ומאבק הדרגתי בעבדות</h3><p>כמושל ניו יורק קידם ג'יי מדיניות שהובילה לביטול הדרגתי של העבדות במדינה. הוא היה מן המייסדים והפעילים של החברה בניו יורק לקידום שחרור עבדים.</p></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">מחלוקות וביקורת היסטורית</h3><p>הביקורת המרכזית על ג'יי נוגעת להסכם ג'יי, שנתפס בעיני רבים בזמנו כפרו־בריטי וכפוגע בכבוד הלאומי. אולם ההסכם הדגים את ההבדל בין פופולריות מיידית לבין שיקול מדיני ארוך טווח.</p></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">מורשת היסטורית</h3><p>מורשתו של ג'ון ג'יי קשורה לביסוס המשפט הפדרלי, לדיפלומטיה האמריקאית המוקדמת, לאשרור החוקה ולמאבק על איחוד חזק.</p><p class="mt-4">ג'יי תרם להבנה שמדינה חדשה זקוקה לשלושה יסודות: הכרה בינלאומית, מערכת משפט עצמאית ומדיניות חוץ שקולה.</p></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">ציטוט ומורשת רעיונית</h3><div class="quote-box">"העם שמחזיק בכוח לבחור את מנהיגיו, חייב להיות עם בעל ידע ומידות טובות."</div><p class="text-slate-400 mt-4">הציטוט מיוחס לג'יי ומבטא רעיון מרכזי של הרפובליקנים בני התקופה: חירות פוליטית דורשת אזרחים משכילים, אחריות מוסרית ומוסדות שמסוגלים לרסן כוח.</p></section>
+</main>
+<div id="imageModal" onclick="closeModal()"><img id="modalImage" src="" alt="תמונה מוגדלת"></div><script>function openModal(src){document.getElementById('modalImage').src=src;document.getElementById('imageModal').style.display='flex'}function closeModal(){document.getElementById('imageModal').style.display='none'}</script>
+</body>
+</html>
