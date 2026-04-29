@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800&family=Frank+Ruhl+Libre:wght@700&display=swap" rel="stylesheet">
   <style>
     :root { --primary-blue:#3b82f6; --dark-bg:#020617; --card-bg:#0f172a; }
-    body { font-family:'Assistant',sans-serif; background:var(--dark-bg); color:#e2e8f0; margin:0; line-height:1.8; }
+    body { font-family:'Assistant',sans-serif; background:var(--dark-bg); color:#e2e8f0; margin:0; line-height:1.85; }
     h1,h2,h3 { font-family:'Frank Ruhl Libre',serif; }
     .main-header { background:#0f172a; border-bottom:2px solid #1e293b; padding:2.5rem 1rem; text-align:center; }
     .nav-container { display:flex; flex-wrap:wrap; justify-content:center; gap:1rem; margin-top:1.5rem; }
@@ -19,6 +19,8 @@
     @media (min-width:768px){ .info-grid{ grid-template-columns:repeat(2,1fr);} }
     .info-box { background:rgba(30,41,59,.55); border:1px solid #1e293b; border-radius:1.25rem; padding:1.25rem; }
     .portrait { width:100%; max-height:620px; object-fit:cover; object-position:top; border-radius:2rem; border:1px solid #334155; cursor:zoom-in; }
+    .quote-box { background:rgba(59,130,246,.08); border-right:5px solid var(--primary-blue); border-radius:0 1rem 1rem 0; padding:1.5rem; color:#cbd5e1; font-style:italic; }
+    .mini-title { color:#60a5fa; font-weight:800; margin-bottom:.4rem; }
     #imageModal { display:none; position:fixed; inset:0; background:rgba(2,6,23,.97); z-index:2000; justify-content:center; align-items:center; padding:2rem; }
     #imageModal img { max-width:95vw; max-height:90vh; border-radius:1rem; }
   </style>
@@ -32,7 +34,7 @@
     </div>
     <nav class="nav-container">
       <a href="../index.html" class="nav-link">דף הבית</a>
-      <a href="../founders.html" class="nav-link active">אבות מייסדים</a>
+      <a href="../founders-index.html" class="nav-link active">אבות מייסדים</a>
       <a href="../constitution.html" class="nav-link">חוקת ארה"ב</a>
       <a href="../timeline.html" class="nav-link">ציר זמן</a>
       <a href="../us-flag.html" class="nav-link">דגל ארה"ב</a>
@@ -43,7 +45,7 @@
 </header>
 
 <main class="max-w-6xl mx-auto px-6 py-14">
-  <a href="../founders.html" class="text-blue-400 font-bold hover:text-blue-300">← חזרה לעמוד האבות המייסדים</a>
+  <a href="../founders-index.html" class="text-blue-400 font-bold hover:text-blue-300">← חזרה לשער האבות המייסדים</a>
 
   <section class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start mt-8 mb-12">
     <div>
@@ -51,6 +53,7 @@
       <h2 class="text-5xl md:text-7xl font-bold text-white mb-6">ג'ורג' וושינגטון</h2>
       <p class="text-2xl text-slate-400 italic">George Washington</p>
       <p class="text-xl text-slate-300 mt-6">האיש שהוביל את הצבא הקונטיננטלי לניצחון במלחמת העצמאות, עיצב את מוסד הנשיאות, וקבע תקדימים פוליטיים שהשפיעו על ארצות הברית לדורות.</p>
+      <div class="quote-box mt-8">"וושינגטון היה האיש החיוני של המהפכה: דמות שאיחדה צבא, קונגרס ואומה צעירה סביב רעיון של עצמאות ושלטון אזרחי."</div>
     </div>
     <img onclick="openModal(this.src)" src="https://i.postimg.cc/qtfqyBBS/Gilbert-Stuart-Williamstown-Portrait-of-George-Washington.jpg" alt="ג'ורג' וושינגטון" class="portrait">
   </section>
@@ -58,34 +61,75 @@
   <section class="section-card">
     <h3 class="text-3xl font-bold text-white mb-6">פרטים בסיסיים</h3>
     <div class="info-grid">
-      <div class="info-box"><strong class="text-blue-400">שם מלא:</strong> ג'ורג' וושינגטון / George Washington</div>
+      <div class="info-box"><strong class="text-blue-400">שם מלא בעברית:</strong> ג'ורג' וושינגטון</div>
+      <div class="info-box"><strong class="text-blue-400">שם מלא באנגלית:</strong> George Washington</div>
       <div class="info-box"><strong class="text-blue-400">לידה:</strong> 22 בפברואר 1732, מחוז וסטמורלנד, מושבת וירג'יניה</div>
       <div class="info-box"><strong class="text-blue-400">פטירה:</strong> 14 בדצמבר 1799, מאונט ורנון, וירג'יניה</div>
-      <div class="info-box"><strong class="text-blue-400">תפקידים מרכזיים:</strong> מפקד הצבא הקונטיננטלי, נשיא ועידת החוקה, הנשיא הראשון של ארה"ב</div>
+      <div class="info-box"><strong class="text-blue-400">תפקידים מרכזיים:</strong> מפקד הצבא הקונטיננטלי, נשיא ועידת החוקה, הנשיא הראשון של ארצות הברית</div>
+      <div class="info-box"><strong class="text-blue-400">כינוי היסטורי:</strong> אבי האומה האמריקאית</div>
     </div>
   </section>
 
   <section class="section-card">
     <h3 class="text-3xl font-bold text-white mb-6">אטימולוגיה ופירוק השם</h3>
-    <p><strong class="text-blue-400">George:</strong> מן השם היווני Georgios, שמשמעותו "עובד אדמה" או "חקלאי". השם הגיע לאנגלית דרך המסורת הנוצרית והאירופית.</p>
-    <p class="mt-4"><strong class="text-blue-400">Washington:</strong> שם משפחה אנגלי שמקורו בשם מקום בצפון־מזרח אנגליה. משמעותו ההיסטורית קשורה ככל הנראה ל"יישובו של אנשי Wassa" או לאחוזה/יישוב קדום בשם דומה.</p>
+    <div class="space-y-5 text-lg text-slate-300">
+      <p><strong class="text-blue-400">George:</strong> מן השם היווני <em>Georgios</em>, שמשמעותו "עובד אדמה" או "חקלאי". השם מורכב מן המילים היווניות <em>ge</em> — אדמה, ו־<em>ergon</em> — עבודה. השם הגיע לאנגלית דרך מסורת נוצרית־אירופית ארוכה.</p>
+      <p><strong class="text-blue-400">Washington:</strong> שם משפחה אנגלי שמקורו בשם מקום בצפון־מזרח אנגליה. משמעותו ההיסטורית קשורה ככל הנראה ליישוב או אחוזה קדומה שנקשרה לשם אישי אנגלו־סקסי. מבחינה לשונית, זהו שם משפחה טופונימי — כלומר שם שמקורו במקום.</p>
+    </div>
   </section>
 
   <section class="section-card">
-    <h3 class="text-3xl font-bold text-white mb-6">ילדות, משפחה והשכלה</h3>
-    <p>וושינגטון נולד למשפחת בעלי אדמות במושבת וירג'יניה. אביו נפטר כשהיה צעיר, ולכן השכלתו הפורמלית הייתה מוגבלת יחסית בהשוואה לכמה אבות מייסדים אחרים. למרות זאת, הוא למד מתמטיקה שימושית, מדידה, ניהול אחוזות וכללי התנהגות של האליטה הווירג'יניאנית.</p>
-    <p class="mt-4">בצעירותו עבד כמודד קרקעות, מקצוע שהעניק לו היכרות מעמיקה עם גבולות הספר, הקרקעות והמרחב הגאוגרפי של וירג'יניה.</p>
+    <h3 class="text-3xl font-bold text-white mb-6">ילדות ומשפחה</h3>
+    <p>וושינגטון נולד למשפחת בעלי אדמות במושבת וירג'יניה, אז חלק מן האימפריה הבריטית. הוא גדל בעולם של אחוזות, חקלאות, מעמדות חברתיים וגבולות ספר מתרחבים. אביו, אוגוסטין וושינגטון, נפטר כאשר ג'ורג' היה צעיר, והאירוע השפיע על מסלול חייו: במקום מסלול לימודים ארוך באנגליה, כפי שהיה מקובל בקרב חלק מבני האליטה הקולוניאלית, הוא נשאר בווירג'יניה והחל לפתח כישורים מעשיים.</p>
+    <p class="mt-4">משפחתו של וושינגטון השתייכה לאליטה המקומית, אך לא הייתה מן העשירות ביותר בראשית דרכו. נישואיו למרתה דנדרידג' קסטיס, אלמנה עשירה, חיזקו את מעמדו החברתי והכלכלי והפכו את מאונט ורנון למרכז חייו הפרטיים והציבוריים.</p>
   </section>
 
   <section class="section-card">
-    <h3 class="text-3xl font-bold text-white mb-6">תרומתו למהפכה ולהקמת המדינה</h3>
-    <p>כמפקד הצבא הקונטיננטלי, וושינגטון ניהל מלחמת התשה ממושכת מול האימפריה הבריטית. הוא שמר על הצבא מאוחד גם בתקופות קשות במיוחד, ובהן החורף בוואלי פורג'.</p>
-    <p class="mt-4">ניצחונו ביוקטאון בשנת 1781 היה נקודת מפנה מכרעת. לאחר המלחמה הוא ויתר על כוחו הצבאי וחזר לחייו הפרטיים, מעשה שחיזק את עקרון עליונות השלטון האזרחי על הצבא.</p>
+    <h3 class="text-3xl font-bold text-white mb-6">השכלה והכשרה מוקדמת</h3>
+    <p>בניגוד לכמה מן האבות המייסדים שלמדו באוניברסיטאות יוקרתיות, השכלתו הפורמלית של וושינגטון הייתה מוגבלת יחסית. עם זאת, הוא רכש ידע מעשי חשוב במתמטיקה, מדידה, ניהול קרקעות, התמצאות בשטח, כתיבה מנהלית וכללי התנהגות של החברה הגבוהה בווירג'יניה.</p>
+    <p class="mt-4">בצעירותו עבד כמודד קרקעות. מקצוע זה העניק לו היכרות מעמיקה עם גבולות המושבה, עם השטח הפנימי של וירג'יניה ועם חשיבות הקרקע בחברה הקולוניאלית. הניסיון הזה סייע לו בהמשך להבין תנועה צבאית, לוגיסטיקה, מרחקים וחשיבות של שליטה במרחב.</p>
+  </section>
+
+  <section class="section-card">
+    <h3 class="text-3xl font-bold text-white mb-6">ניסיון צבאי לפני המהפכה</h3>
+    <p>עוד לפני מלחמת העצמאות, וושינגטון רכש ניסיון צבאי במלחמת הצרפתים והאינדיאנים, הזירה הצפון־אמריקאית של מלחמת שבע השנים. אף שלא תמיד הצליח מבחינה צבאית בשלבים המוקדמים, הוא צבר ניסיון פיקודי, למד את מגבלות הצבא הבריטי ואת חשיבותם של מודיעין, אספקה, משמעת ותמרון.</p>
+    <p class="mt-4">החוויה הצבאית המוקדמת חיזקה את מעמדו הציבורי בווירג'יניה והכינה אותו לתפקידו העתידי כמפקד הצבא הקונטיננטלי.</p>
+  </section>
+
+  <section class="section-card">
+    <h3 class="text-3xl font-bold text-white mb-6">תרומתו למהפכה האמריקאית</h3>
+    <p>וושינגטון היה "האיש החיוני" של המהפכה. כמפקד הצבא הקונטיננטלי, הוא ניהל מלחמת התשה מול האימפריה החזקה בעולם בתנאים של מחסור קיצוני בנשק, מזון, ביגוד, כסף ומשמעת צבאית. כוחו לא היה רק בניצחונות בשדה הקרב, אלא ביכולתו לשמור על הצבא קיים ומאוחד לאורך שנים.</p>
+    <p class="mt-4">מנהיגותו בוואלי פורג' הפכה לסמל של עמידה איתנה. בזמן שחייליו סבלו מקור, רעב ומחסור, הוא שמר על מסגרת פיקודית, קיבל סיוע מקצועי מאנשי הדרכה אירופים כמו הברון פון שטויבן, וחיזק את הצבא ככוח מאורגן וממושמע יותר.</p>
+    <p class="mt-4">הניצחון ביוקטאון בשנת 1781, בשיתוף פעולה עם הצבא והצי הצרפתיים, היה נקודת מפנה מכרעת. הוא הוביל בפועל לסיום הקרבות הגדולים ולפתיחת הדרך להכרה בריטית בעצמאות ארצות הברית.</p>
+  </section>
+
+  <section class="section-card">
+    <h3 class="text-3xl font-bold text-white mb-6">ויתור על כוח ועליונות השלטון האזרחי</h3>
+    <p>אחת מתרומותיו החשובות ביותר של וושינגטון לא הייתה ניצחון צבאי, אלא דווקא ויתור על כוח. לאחר המלחמה הוא התפטר מתפקידו כמפקד הצבא וחזר למאונט ורנון. בעולם שבו מפקדים מצליחים הפכו לעיתים לשליטים צבאיים, המעשה הזה היה מסר פוליטי עוצמתי: הצבא כפוף לשלטון אזרחי, והמהפכה לא נועדה להחליף מלך ברודן חדש.</p>
+  </section>
+
+  <section class="section-card">
+    <h3 class="text-3xl font-bold text-white mb-6">ועידת החוקה והנשיאות</h3>
+    <p>בשנת 1787 עמד וושינגטון בראש ועידת החוקה בפילדלפיה. עצם נוכחותו העניקה לוועידה יוקרה, אמון וסמכות ציבורית. לאחר אשרור החוקה נבחר פה אחד לנשיא הראשון של ארצות הברית.</p>
+    <p class="mt-4">כנשיא הראשון, הוא בנה תקדימים מוסדיים כמעט מאפס: הקמת קבינט, מערכת יחסים בין הנשיא לקונגרס, יחס לנייטרליות במדיניות חוץ, שימוש בסמכות פדרלית, וטקסי מעבר שלטון. פרישתו לאחר שתי קדנציות קבעה נורמה של הגבלת כוח אישית, שהפכה בהמשך לעיקרון חוקתי.</p>
+  </section>
+
+  <section class="section-card">
+    <h3 class="text-3xl font-bold text-white mb-6">מחלוקות וביקורת היסטורית</h3>
+    <p>דמותו של וושינגטון נערצת, אך גם מורכבת. הוא היה בעל עבדים במשך רוב חייו, והדבר עומד בסתירה חריפה לרעיונות החירות שהמהפכה האמריקאית קידמה. בצוואתו הורה לשחרר את האנשים שהיו בבעלותו לאחר מות רעייתו, אך עובדה זו אינה מבטלת את חלקו במערכת העבדות של וירג'יניה.</p>
+    <p class="mt-4">הבנה היסטורית בוגרת של וושינגטון מחייבת להחזיק יחד את שתי האמיתות: הוא היה מנהיג מכריע בהקמת רפובליקה חופשית, והוא גם היה חלק מחברה שבנתה את חירותם של חלק מבני האדם תוך שלילת חירותם של אחרים.</p>
   </section>
 
   <section class="section-card">
     <h3 class="text-3xl font-bold text-white mb-6">מורשת היסטורית</h3>
-    <p>וושינגטון נחשב לאחד האישים החשובים ביותר בתולדות ארצות הברית. הוא עיצב את מוסד הנשיאות, קבע תקדימים של איפוק שלטוני, והפך לסמל של מנהיגות, אחריות ציבורית והעברת כוח מסודרת.</p>
+    <p>וושינגטון נחשב לאחד האישים החשובים ביותר בתולדות ארצות הברית. הוא עיצב את דמות המנהיג הרפובליקני: תקיף אך מאופק, בעל סמכות אך מודע לגבולותיה, ומוכן לוותר על כוח כדי לשמר את הרפובליקה.</p>
+    <p class="mt-4">מורשתו ניכרת במוסד הנשיאות, במסורת העברת השלטון, במעמד הצבא ביחס לממשלה האזרחית, ובדימוי הלאומי של ארצות הברית כאומה שנולדה מתוך מאבק לחירות.</p>
+  </section>
+
+  <section class="section-card">
+    <h3 class="text-3xl font-bold text-white mb-6">ציטוט ומורשת רעיונית</h3>
+    <div class="quote-box">"החופש, ברגע שהוא מתחיל להכות שורש, הוא צמח שצומח במהירות."</div>
+    <p class="text-slate-400 mt-4">הציטוט מיוחס לוושינגטון ומבטא את הדרך שבה נתפסה החירות בעיני דור המהפכה: לא רק זכות משפטית, אלא כוח היסטורי שמתפשט כאשר בני אדם מתחילים להאמין בו.</p>
   </section>
 </main>
 
