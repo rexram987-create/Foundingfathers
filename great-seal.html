@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>החותם הגדול של ארצות הברית - מורשת ארה"ב</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800&family=Frank+Ruhl+Libre:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root { --primary-blue:#3b82f6; --dark-bg:#020617; --card-bg:#0f172a; }
+    body { font-family:'Assistant',sans-serif; background:var(--dark-bg); color:#e2e8f0; margin:0; line-height:1.85; }
+    h1,h2,h3,h4 { font-family:'Frank Ruhl Libre',serif; }
+    .main-header { background:#0f172a; border-bottom:2px solid #1e293b; padding:2.5rem 1rem; text-align:center; }
+    .nav-container { display:flex; flex-wrap:wrap; justify-content:center; gap:1rem; margin-top:1.5rem; }
+    .nav-link { padding:.8rem 1.5rem; font-weight:700; color:#94a3b8; border-radius:1rem; background:rgba(30,41,59,.5); border:1px solid #1e293b; text-decoration:none; transition:.3s; }
+    .nav-link:hover,.nav-link.active { color:white; background:var(--primary-blue); box-shadow:0 4px 15px rgba(59,130,246,.3); }
+    .hero { background:linear-gradient(rgba(2,6,23,.82),rgba(2,6,23,.9)), radial-gradient(circle at center,#1e3a8a,#020617); padding:5rem 1.5rem; text-align:center; border-bottom:1px solid #1e293b; }
+    .section-card { background:var(--card-bg); border:1px solid #1e293b; border-radius:2rem; padding:2rem; margin-bottom:2rem; }
+    .image-card { background:white; border-radius:2rem; padding:1.25rem; box-shadow:0 25px 70px rgba(0,0,0,.45); }
+    .seal-image { width:100%; max-height:560px; object-fit:contain; border-radius:1.25rem; cursor:zoom-in; }
+    .fact-grid { display:grid; grid-template-columns:1fr; gap:1rem; }
+    @media(min-width:768px){ .fact-grid{ grid-template-columns:repeat(2,1fr);} }
+    .fact-box { background:rgba(30,41,59,.55); border:1px solid #1e293b; border-radius:1.25rem; padding:1.25rem; }
+    .symbolism-box { background:rgba(30,41,59,.45); border-right:6px solid var(--primary-blue); padding:1.5rem; border-radius:0 1.25rem 1.25rem 0; margin-bottom:1.25rem; }
+    .quote-box { background:rgba(59,130,246,.08); border-right:5px solid var(--primary-blue); border-radius:0 1rem 1rem 0; padding:1.5rem; color:#cbd5e1; font-style:italic; }
+    #imageModal { display:none; position:fixed; inset:0; background:rgba(2,6,23,.97); z-index:2000; justify-content:center; align-items:center; padding:2rem; }
+    #imageModal img { max-width:95vw; max-height:90vh; border-radius:1rem; background:white; padding:1rem; }
+  </style>
+</head>
+<body>
+<header class="main-header">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex justify-center items-center gap-4 mb-2">
+      <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center font-bold text-white text-lg">US</div>
+      <h1 class="text-3xl md:text-4xl font-bold text-white">מורשת ארה"ב</h1>
+    </div>
+    <nav class="nav-container">
+      <a href="index.html" class="nav-link">דף הבית</a>
+      <a href="founders-index.html" class="nav-link">אבות מייסדים</a>
+      <a href="constitution.html" class="nav-link">חוקת ארה"ב</a>
+      <a href="timeline.html" class="nav-link">ציר זמן</a>
+      <a href="us-flag.html" class="nav-link">דגל ארה"ב</a>
+      <a href="anthem.html" class="nav-link">ההמנון הלאומי</a>
+      <a href="about.html" class="nav-link">קצת עליי</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <p class="text-blue-400 font-bold tracking-widest uppercase mb-4">The Great Seal</p>
+  <h2 class="text-5xl md:text-7xl font-bold text-white mb-6">החותם הגדול של ארצות הברית</h2>
+  <p class="text-2xl text-slate-300 italic">הסמל הרשמי של הריבונות האמריקאית</p>
+</section>
+
+<main class="max-w-6xl mx-auto px-6 py-14">
+  <section class="section-card">
+    <h3 class="text-4xl font-bold text-white mb-6">מהו החותם הגדול?</h3>
+    <p class="text-xl text-slate-300">החותם הגדול של ארצות הברית הוא אחד הסמלים הרשמיים החשובים ביותר של המדינה. הוא משמש לאישור מסמכים רשמיים, מייצג את סמכות הממשל הפדרלי, ומרכז בתוכו רעיונות של אחדות, שלום, הגנה, השגחה, התחלה חדשה וחזון היסטורי.</p>
+    <div class="quote-box mt-8">החותם הגדול אינו רק איור רשמי; הוא מעין “מפת רעיונות” של הרפובליקה האמריקאית בראשיתה.</div>
+  </section>
+
+  <section class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start mb-12">
+    <div class="image-card">
+      <img onclick="openModal(this.src)" class="seal-image" src="assets/images/symbols/great-seal-obverse.jpg" alt="החלק הקדמי של החותם הגדול של ארצות הברית">
+      <p class="text-slate-800 mt-4 text-center font-bold">החלק הקדמי — Obverse</p>
+    </div>
+    <div class="image-card">
+      <img onclick="openModal(this.src)" class="seal-image" src="assets/images/symbols/great-seal-reverse.jpg" alt="החלק האחורי של החותם הגדול של ארצות הברית">
+      <p class="text-slate-800 mt-4 text-center font-bold">החלק האחורי — Reverse</p>
+    </div>
+  </section>
+
+  <section class="section-card">
+    <h3 class="text-3xl font-bold text-white mb-6">פרטים בסיסיים</h3>
+    <div class="fact-grid">
+      <div class="fact-box"><strong class="text-blue-400">שם עברי:</strong> החותם הגדול של ארצות הברית</div>
+      <div class="fact-box"><strong class="text-blue-400">שם אנגלי:</strong> Great Seal of the United States</div>
+      <div class="fact-box"><strong class="text-blue-400">אומץ רשמית:</strong> 20 ביוני 1782</div>
+      <div class="fact-box"><strong class="text-blue-400">שימוש:</strong> אימות מסמכים רשמיים של ממשלת ארצות הברית</div>
+      <div class="fact-box"><strong class="text-blue-400">צד קדמי:</strong> עיטם לבן־ראש, מגן, ענף זית, חצים ומוטו</div>
+      <div class="fact-box"><strong class="text-blue-400">צד אחורי:</strong> פירמידה בלתי גמורה, עין ההשגחה ומוטואים לטיניים</div>
+    </div>
+  </section>
+
+  <section class="section-card">
+    <h3 class="text-3xl font-bold text-white mb-6">החלק הקדמי של החותם</h3>
+    <div class="symbolism-box"><h4 class="text-2xl font-bold text-white mb-3">העיטם לבן־הראש</h4><p class="text-slate-300">העיט מסמל ריבונות, עצמאות, עוצמה וראייה רחבה. הוא נושא את החותם כולו כייצוג של המדינה.</p></div>
+    <div class="symbolism-box"><h4 class="text-2xl font-bold text-white mb-3">המגן שעל החזה</h4><p class="text-slate-300">המגן כולל 13 פסים, המזכירים את 13 המושבות המקוריות. הוא מונח על העיט ללא תומכים חיצוניים — רמז לכך שהאומה נשענת על עצמה.</p></div>
+    <div class="symbolism-box"><h4 class="text-2xl font-bold text-white mb-3">ענף הזית והחצים</h4><p class="text-slate-300">ענף הזית מסמל שלום, והחצים מסמלים מוכנות להגנה. ראש העיט מופנה אל ענף הזית, כסימן להעדפת שלום על פני מלחמה.</p></div>
+    <div class="symbolism-box"><h4 class="text-2xl font-bold text-white mb-3">E Pluribus Unum</h4><p class="text-slate-300">המוטו הלטיני פירושו: “מתוך רבים — אחד”. הוא מבטא את רעיון האיחוד של מדינות, קהילות וזהויות שונות למסגרת לאומית אחת.</p></div>
+  </section>
+
+  <section class="section-card">
+    <h3 class="text-3xl font-bold text-white mb-6">החלק האחורי של החותם</h3>
+    <div class="symbolism-box"><h4 class="text-2xl font-bold text-white mb-3">הפירמידה הבלתי גמורה</h4><p class="text-slate-300">הפירמידה מסמלת בנייה, יציבות והמשכיות. היא בלתי גמורה כדי לרמוז שהמפעל האמריקאי עדיין נמצא בתהליך התהוות.</p></div>
+    <div class="symbolism-box"><h4 class="text-2xl font-bold text-white mb-3">MDCCLXXVI</h4><p class="text-slate-300">הספרות הרומיות מייצגות את שנת 1776 — שנת הכרזת העצמאות.</p></div>
+    <div class="symbolism-box"><h4 class="text-2xl font-bold text-white mb-3">עין ההשגחה</h4><p class="text-slate-300">העין בתוך המשולש מסמלת השגחה, תקווה והכוונה עליונה מעל המפעל החדש של הרפובליקה.</p></div>
+    <div class="symbolism-box"><h4 class="text-2xl font-bold text-white mb-3">Annuit Coeptis ו־Novus Ordo Seclorum</h4><p class="text-slate-300">הביטויים הלטיניים מבטאים את הרעיון שהמפעל האמריקאי זוכה לברכה, ושהוקם “סדר חדש של הדורות”.</p></div>
+  </section>
+
+  <section class="section-card">
+    <h3 class="text-3xl font-bold text-white mb-6">החותם הגדול והדולר</h3>
+    <p>הצדדים של החותם הגדול מוכרים לציבור הרחב במיוחד בזכות הופעתם על שטר הדולר האמריקאי. כך הפך החותם מסמל ממשלתי רשמי לדימוי חזותי מוכר בכל העולם.</p>
+  </section>
+</main>
+
+<div id="imageModal" onclick="closeModal()"><img id="modalImage" src="" alt="תמונה מוגדלת"></div>
+<script>
+function openModal(src){ document.getElementById('modalImage').src = src; document.getElementById('imageModal').style.display='flex'; }
+function closeModal(){ document.getElementById('imageModal').style.display='none'; }
+</script>
+</body>
+</html>
