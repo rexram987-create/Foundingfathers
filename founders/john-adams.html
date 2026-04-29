@@ -16,6 +16,7 @@
     .nav-link:hover,.nav-link.active { color:white; background:var(--primary-blue); box-shadow:0 4px 15px rgba(59,130,246,.3); }
     .section-card { background:var(--card-bg); border:1px solid #1e293b; border-radius:2rem; padding:2rem; margin-bottom:2rem; }
     .portrait { width:100%; max-height:620px; object-fit:cover; object-position:top; border-radius:2rem; border:1px solid #334155; cursor:zoom-in; }
+    .credit { color:#64748b; font-size:.85rem; margin-top:.75rem; }
     .info-grid { display:grid; grid-template-columns:1fr; gap:1rem; }
     @media(min-width:768px){ .info-grid{ grid-template-columns:repeat(2,1fr);} }
     .info-box { background:rgba(30,41,59,.55); border:1px solid #1e293b; border-radius:1.25rem; padding:1.25rem; }
@@ -54,7 +55,10 @@
       <p class="text-xl text-slate-300 mt-6">עורך דין, מדינאי ודיפלומט, מן הדוחפים המרכזיים לעצמאות האמריקאית ואחד ממעצבי הרפובליקה בראשיתה.</p>
       <div class="quote-box mt-8">"אדמס היה מן האנשים שהבינו שהמהפכה אינה רק מלחמה נגד בריטניה, אלא בניית שיטה פוליטית הנשענת על חוק, מוסדות ואחריות אזרחית."</div>
     </div>
-    <img onclick="openModal(this.src)" src="https://i.postimg.cc/kVrGKMMf/Gilbert-Stuart-John-Adams-c-1800-1815-NGA-42933.jpg" alt="ג'ון אדמס" class="portrait">
+    <div>
+      <img onclick="openModal(this.src)" src="../assets/images/founders/john-adams.jpg" alt="ג'ון אדמס" class="portrait">
+      <p class="credit">מקור התמונה: Wikimedia Commons · נחלת הכלל · צייר: Gilbert Stuart · קובץ מקור: Gilbert Stuart, John Adams, c. 1800-1815, NGA 42933.jpg</p>
+    </div>
   </section>
 
   <section class="section-card">
