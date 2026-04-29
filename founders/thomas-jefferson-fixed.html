@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>תומאס ג'פרסון - מורשת ארה"ב</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800&family=Frank+Ruhl+Libre:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root { --primary-blue:#3b82f6; --dark-bg:#020617; --card-bg:#0f172a; }
+    body { font-family:'Assistant',sans-serif; background:var(--dark-bg); color:#e2e8f0; margin:0; line-height:1.85; }
+    h1,h2,h3 { font-family:'Frank Ruhl Libre',serif; }
+    .main-header { background:#0f172a; border-bottom:2px solid #1e293b; padding:2.5rem 1rem; text-align:center; }
+    .nav-container { display:flex; flex-wrap:wrap; justify-content:center; gap:1rem; margin-top:1.5rem; }
+    .nav-link { padding:.8rem 1.5rem; font-weight:700; color:#94a3b8; border-radius:1rem; background:rgba(30,41,59,.5); border:1px solid #1e293b; text-decoration:none; transition:.3s; }
+    .nav-link:hover,.nav-link.active { color:white; background:var(--primary-blue); box-shadow:0 4px 15px rgba(59,130,246,.3); }
+    .section-card { background:var(--card-bg); border:1px solid #1e293b; border-radius:2rem; padding:2rem; margin-bottom:2rem; }
+    .portrait { width:100%; max-height:620px; object-fit:cover; object-position:top; border-radius:2rem; border:1px solid #334155; cursor:zoom-in; }
+    .credit { color:#64748b; font-size:.85rem; margin-top:.75rem; }
+    .info-grid { display:grid; grid-template-columns:1fr; gap:1rem; }
+    @media(min-width:768px){ .info-grid{ grid-template-columns:repeat(2,1fr);} }
+    .info-box { background:rgba(30,41,59,.55); border:1px solid #1e293b; border-radius:1.25rem; padding:1.25rem; }
+    .quote-box { background:rgba(59,130,246,.08); border-right:5px solid var(--primary-blue); border-radius:0 1rem 1rem 0; padding:1.5rem; color:#cbd5e1; font-style:italic; }
+    #imageModal { display:none; position:fixed; inset:0; background:rgba(2,6,23,.97); z-index:2000; justify-content:center; align-items:center; padding:2rem; }
+    #imageModal img { max-width:95vw; max-height:90vh; border-radius:1rem; }
+  </style>
+</head>
+<body>
+<header class="main-header">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex justify-center items-center gap-4 mb-2"><div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center font-bold text-white text-lg">US</div><h1 class="text-3xl md:text-4xl font-bold text-white">מורשת ארה"ב</h1></div>
+    <nav class="nav-container"><a href="../index.html" class="nav-link">דף הבית</a><a href="../founders-index.html" class="nav-link active">אבות מייסדים</a><a href="../constitution.html" class="nav-link">חוקת ארה"ב</a><a href="../timeline.html" class="nav-link">ציר זמן</a><a href="../us-flag.html" class="nav-link">דגל ארה"ב</a><a href="../anthem.html" class="nav-link">ההמנון הלאומי</a><a href="../about.html" class="nav-link">קצת עליי</a></nav>
+  </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-6 py-14">
+  <a href="../founders-index.html" class="text-blue-400 font-bold hover:text-blue-300">← חזרה לשער האבות המייסדים</a>
+
+  <section class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start mt-8 mb-12">
+    <div>
+      <p class="text-blue-400 font-bold tracking-widest uppercase">מחבר הצהרת העצמאות והנשיא השלישי</p>
+      <h2 class="text-5xl md:text-7xl font-bold text-white mb-6">תומאס ג'פרסון</h2>
+      <p class="text-2xl text-slate-400 italic">Thomas Jefferson</p>
+      <p class="text-xl text-slate-300 mt-6">הוגה פוליטי, מדינאי, מחבר הצהרת העצמאות ואחד הקולות המרכזיים בעיצוב רעיון החירות האמריקאי.</p>
+      <div class="quote-box mt-8">"ג'פרסון העניק למהפכה האמריקאית את שפתה המוסרית: זכויות טבעיות, הסכמת הנמשלים והאמונה שהשלטון קיים למען האדם ולא להפך."</div>
+    </div>
+    <div>
+      <img onclick="openModal(this.src)" src="../assets/images/founders/thomas-jefferson.jpg" alt="תומאס ג'פרסון" class="portrait">
+      <p class="credit">מקור התמונה: Wikimedia Commons · נחלת הכלל · צייר: Rembrandt Peale · קובץ מקור: Official Presidential portrait of Thomas Jefferson (by Rembrandt Peale, 1800)(cropped).jpg</p>
+    </div>
+  </section>
+
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">פרטים בסיסיים</h3><div class="info-grid"><div class="info-box"><strong class="text-blue-400">שם מלא בעברית:</strong> תומאס ג'פרסון</div><div class="info-box"><strong class="text-blue-400">שם מלא באנגלית:</strong> Thomas Jefferson</div><div class="info-box"><strong class="text-blue-400">לידה:</strong> 13 באפריל 1743, שאדוול, מושבת וירג'יניה</div><div class="info-box"><strong class="text-blue-400">פטירה:</strong> 4 ביולי 1826, מונטיצ'לו, וירג'יניה</div><div class="info-box"><strong class="text-blue-400">תפקידים מרכזיים:</strong> מחבר הצהרת העצמאות, מושל וירג'יניה, מזכיר המדינה הראשון, סגן הנשיא השני, הנשיא השלישי של ארצות הברית</div><div class="info-box"><strong class="text-blue-400">כינוי היסטורי:</strong> הפילוסוף של המהפכה</div></div></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">אטימולוגיה ופירוק השם</h3><p><strong class="text-blue-400">Thomas:</strong> מקורו בשם הארמי <em>תאומא</em>, שמשמעותו "תאום". דרך המסורת הנוצרית והלטינית הפך השם Thomas לאחד השמות הנפוצים באירופה ובאנגליה.</p><p class="mt-4"><strong class="text-blue-400">Jefferson:</strong> שם משפחה פטרונימי שמשמעותו "בנו של ג'פרי". השם Jefferson מציין שייכות משפחתית לדמות קדומה בשם Geoffrey או Jeffrey.</p></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">ילדות ומשפחה</h3><p>ג'פרסון נולד בווירג'יניה למשפחת בעלי אדמות ממעמד גבוה. אביו, פיטר ג'פרסון, היה מודד קרקעות ובעל אחוזה, ואמו, ג'יין רנדולף, השתייכה לאחת המשפחות הבולטות בחברה הווירג'יניאנית.</p><p class="mt-4">ג'פרסון נישא למרתה וויילס סקלטון. אחוזתו מונטיצ'לו הייתה ביתו, מעבדתו האדריכלית וסמל לאהבתו לאדריכלות, חקלאות, ספרים ורעיונות.</p></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">השכלה, שפות ותחומי עניין</h3><p>ג'פרסון למד בקולג' ויליאם ומרי, רכש השכלה רחבה במשפטים, פילוסופיה, מדעים, היסטוריה, שפות קלאסיות ואדריכלות. הוא היה קורא עצום ואדם שהאמין כי השכלה היא תנאי לקיום רפובליקה חופשית.</p><p class="mt-4">תחומי העניין שלו כללו אדריכלות, חקלאות, גאוגרפיה, מוזיקה, מדעי הטבע, משפט, דת ופוליטיקה.</p></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">פעילות לפני המהפכה</h3><p>לפני פרוץ המהפכה פעל ג'פרסון במוסדות הפוליטיים של וירג'יניה והפך לאחד הקולות הבולטים נגד התערבות בריטית בזכויות המושבות. חיבורו המוקדם "A Summary View of the Rights of British America" הכין את הקרקע הרעיונית לניסוח הצהרת העצמאות.</p></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">הצהרת העצמאות</h3><p>תרומתו הגדולה ביותר של ג'פרסון למהפכה הייתה ניסוח הצהרת העצמאות בשנת 1776. בגיל 33 בלבד הוא ניסח מסמך קצר אך מהפכני, שהכריז כי כל בני האדם נבראו שווים וכי הם ניחנים בזכויות שאינן ניתנות לשלילה — חיים, חירות והחתירה לאושר.</p><p class="mt-4">הצהרת העצמאות הייתה הצהרה פילוסופית על מקור הלגיטימיות של השלטון ועל זכויות האדם.</p></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">וירג'יניה, חופש דת וחינוך</h3><p>ג'פרסון פעל לקידום הפרדת הדת מן המדינה ולחופש דת. חוק חופש הדת של וירג'יניה, שנחקק בהשראתו, היה אחד ההישגים החשובים בתחום זכויות המצפון.</p><p class="mt-4">בסוף חייו ייסד את אוניברסיטת וירג'יניה, שאותה ראה כאחד מהישגיו החשובים ביותר.</p></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">דיפלומט, מזכיר מדינה וסגן נשיא</h3><p>לאחר המהפכה שירת ג'פרסון כדיפלומט בצרפת. בהמשך מונה למזכיר המדינה הראשון של ארצות הברית תחת ג'ורג' וושינגטון, וכיהן כסגן נשיא תחת ג'ון אדמס בתקופה של יריבות פוליטית חריפה.</p></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">הנשיאות ורכישת לואיזיאנה</h3><p>ג'פרסון נבחר לנשיא בשנת 1800. האירוע המרכזי בנשיאותו היה רכישת לואיזיאנה בשנת 1803, שהכפילה כמעט את שטחה של ארצות הברית.</p><p class="mt-4">בעקבות הרכישה שלח את משלחת לואיס וקלארק לחקור את המרחבים החדשים וליצור קשרים ראשוניים עם עמים ילידיים במערב.</p></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">מחלוקות וביקורת היסטורית</h3><p>ג'פרסון הוא אחת הדמויות המורכבות ביותר בדור המייסדים. מצד אחד, הוא ניסח את המשפט "כל בני האדם נבראו שווים"; מצד שני, הוא היה בעל עבדים במשך כל חייו.</p><p class="mt-4">הקשר שלו עם סאלי המינגס והמדיניות כלפי עמים ילידיים הם חלק מרכזי מן הדיון ההיסטורי המודרני בדמותו.</p></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">הקשר עם ג'ון אדמס</h3><p>ג'פרסון ואדמס היו שותפים למהפכה ולחזון העצמאות, אך הפכו בהמשך ליריבים פוליטיים. לאחר שנים של נתק, השניים חידשו קשר במכתבים ארוכים ועמוקים. שניהם מתו באותו יום, 4 ביולי 1826, חמישים שנה בדיוק לאחר הכרזת העצמאות.</p></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">מורשת היסטורית</h3><p>ג'פרסון הותיר מורשת עצומה: הצהרת העצמאות, רעיון זכויות האדם, חופש הדת, חשיבות החינוך, הרחבת גבולות המדינה ורעיון האזרח החופשי.</p><p class="mt-4">עם זאת, מורשתו אינה פשוטה. הוא מייצג גם את הסתירות של הרפובליקה האמריקאית בראשיתה: אידיאלים אוניברסליים לצד עבדות, נאורות לצד היררכיה גזעית, וחירות פוליטית לצד התפשטות על חשבון עמים ילידיים.</p></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">ציטוט ומורשת רעיונית</h3><div class="quote-box">"אני מעדיף את הסכנות של החירות על פני השקט של העבדות."</div><p class="text-slate-400 mt-4">הציטוט מיוחס לג'פרסון ומבטא את האופן שבו נתפסה החירות בעיני ההוגים הרפובליקנים: מצב שאינו תמיד בטוח או נוח, אך עדיף על ציות כפוי ושלטון ללא הסכמה.</p></section>
+</main>
+<div id="imageModal" onclick="closeModal()"><img id="modalImage" src="" alt="תמונה מוגדלת"></div><script>function openModal(src){document.getElementById('modalImage').src=src;document.getElementById('imageModal').style.display='flex'}function closeModal(){document.getElementById('imageModal').style.display='none'}</script>
+</body>
+</html>
