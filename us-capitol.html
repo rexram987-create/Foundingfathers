@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>הקפיטול של ארצות הברית - מורשת ארה"ב</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800&family=Frank+Ruhl+Libre:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root { --primary-blue:#3b82f6; --dark-bg:#020617; --card-bg:#0f172a; }
+    body { font-family:'Assistant',sans-serif; background:var(--dark-bg); color:#e2e8f0; margin:0; line-height:1.85; }
+    h1,h2,h3,h4 { font-family:'Frank Ruhl Libre',serif; }
+    .main-header { background:#0f172a; border-bottom:2px solid #1e293b; padding:2.5rem 1rem; text-align:center; }
+    .nav-container { display:flex; flex-wrap:wrap; justify-content:center; gap:1rem; margin-top:1.5rem; }
+    .nav-link { padding:.8rem 1.5rem; font-weight:700; color:#94a3b8; border-radius:1rem; background:rgba(30,41,59,.5); border:1px solid #1e293b; text-decoration:none; transition:.3s; }
+    .nav-link:hover,.nav-link.active { color:white; background:var(--primary-blue); box-shadow:0 4px 15px rgba(59,130,246,.3); }
+    .hero { background:linear-gradient(rgba(2,6,23,.70),rgba(2,6,23,.88)), url('assets/images/landmarks/us-capitol-modern-view.jpg'); background-size:cover; background-position:center; padding:6rem 1.5rem; text-align:center; border-bottom:1px solid #1e293b; }
+    .section-card { background:var(--card-bg); border:1px solid #1e293b; border-radius:2rem; padding:2rem; margin-bottom:2rem; }
+    .image-card { background:white; border-radius:2rem; padding:1.25rem; box-shadow:0 25px 70px rgba(0,0,0,.45); }
+    .landmark-image { width:100%; max-height:560px; object-fit:cover; border-radius:1.25rem; cursor:zoom-in; }
+    .credit { color:#475569; font-size:.9rem; margin-top:.8rem; line-height:1.5; }
+    .fact-grid { display:grid; grid-template-columns:1fr; gap:1rem; }
+    @media(min-width:768px){ .fact-grid{ grid-template-columns:repeat(2,1fr);} }
+    .fact-box { background:rgba(30,41,59,.55); border:1px solid #1e293b; border-radius:1.25rem; padding:1.25rem; }
+    .note-box { background:rgba(59,130,246,.1); border:1px solid rgba(59,130,246,.3); border-radius:1.5rem; padding:1.5rem; }
+    #imageModal { display:none; position:fixed; inset:0; background:rgba(2,6,23,.97); z-index:2000; justify-content:center; align-items:center; padding:2rem; }
+    #imageModal img { max-width:95vw; max-height:90vh; border-radius:1rem; }
+  </style>
+</head>
+<body>
+<header class="main-header">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex justify-center items-center gap-4 mb-2"><div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center font-bold text-white text-lg">US</div><h1 class="text-3xl md:text-4xl font-bold text-white">מורשת ארה"ב</h1></div>
+    <nav class="nav-container">
+      <a href="index.html" class="nav-link">דף הבית</a>
+      <a href="founders-index.html" class="nav-link">אבות מייסדים</a>
+      <a href="constitution.html" class="nav-link">חוקת ארה"ב</a>
+      <a href="timeline.html" class="nav-link">ציר זמן</a>
+      <a href="us-flag.html" class="nav-link">דגל ארה"ב</a>
+      <a href="bald-eagle.html" class="nav-link">העיט האמריקאי</a>
+      <a href="great-seal.html" class="nav-link">החותם הגדול</a>
+      <a href="white-house.html" class="nav-link">הבית הלבן</a>
+      <a href="us-capitol.html" class="nav-link active">הקפיטול</a>
+      <a href="anthem.html" class="nav-link">ההמנון הלאומי</a>
+      <a href="about.html" class="nav-link">קצת עליי</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <p class="text-blue-300 font-bold tracking-widest uppercase mb-4">Seat of Congress</p>
+  <h2 class="text-5xl md:text-7xl font-bold text-white mb-6">הקפיטול של ארצות הברית</h2>
+  <p class="text-2xl text-slate-300 italic">בית הקונגרס וסמל הרשות המחוקקת</p>
+</section>
+
+<main class="max-w-6xl mx-auto px-6 py-14">
+  <section class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start mb-12">
+    <div class="section-card">
+      <h3 class="text-4xl font-bold text-white mb-6">מהו הקפיטול?</h3>
+      <p class="text-xl text-slate-300">הקפיטול של ארצות הברית הוא מקום מושבו של הקונגרס — הסנאט ובית הנבחרים. הוא מסמל את הרשות המחוקקת ואת רעיון הייצוג הפוליטי ברפובליקה האמריקאית.</p>
+      <p class="text-lg text-slate-300 mt-4">הבניין ניצב בגבעת הקפיטול בוושינגטון הבירה, והוא אחד המבנים המזוהים ביותר עם הדמוקרטיה האמריקאית.</p>
+    </div>
+    <div class="image-card">
+      <img onclick="openModal(this.src)" src="assets/images/landmarks/us-capitol-modern-view.jpg" alt="הקפיטול של ארצות הברית" class="landmark-image">
+      <p class="credit">איור/תמונה דקורטיבית של הקפיטול · קובץ: us-capitol-modern-view.jpg</p>
+    </div>
+  </section>
+
+  <section class="section-card">
+    <h3 class="text-3xl font-bold text-white mb-6">פרטים בסיסיים</h3>
+    <div class="fact-grid">
+      <div class="fact-box"><strong class="text-blue-400">שם עברי:</strong> הקפיטול של ארצות הברית</div>
+      <div class="fact-box"><strong class="text-blue-400">שם אנגלי:</strong> United States Capitol</div>
+      <div class="fact-box"><strong class="text-blue-400">מיקום:</strong> גבעת הקפיטול, וושינגטון הבירה</div>
+      <div class="fact-box"><strong class="text-blue-400">תפקיד:</strong> מושב הקונגרס של ארצות הברית</div>
+      <div class="fact-box"><strong class="text-blue-400">סמליות:</strong> הרשות המחוקקת, ייצוג, חקיקה ופדרליזם</div>
+      <div class="fact-box"><strong class="text-blue-400">אירוע מכונן:</strong> שריפת הקפיטול בשנת 1814</div>
+    </div>
+  </section>
+
+  <section class="section-card">
+    <h3 class="text-3xl font-bold text-white mb-6">שריפת הקפיטול בשנת 1814</h3>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+      <div>
+        <p class="text-lg text-slate-300">במהלך מלחמת 1812 נכנסו כוחות בריטיים לוושינגטון הבירה ושרפו מבני ממשל מרכזיים, ובהם הקפיטול. באותה תקופה המבנה עדיין לא היה זהה לקפיטול המודרני שאנו מכירים כיום.</p>
+        <p class="text-lg text-slate-300 mt-4">שריפת הקפיטול הייתה פגיעה ישירה בסמל הרשות המחוקקת של הרפובליקה הצעירה. השיקום שלאחר מכן סימל את עמידות המוסדות האמריקאיים ואת המשך פעולת השלטון גם לאחר משבר עמוק.</p>
+        <div class="note-box mt-6 text-slate-300"><strong class="text-blue-300">חשוב לדעת:</strong> כשמדברים על שריפת “גבעת הקפיטול”, הכוונה המדויקת יותר היא לשריפת בניין הקפיטול ומבני ממשל מרכזיים, ולא לכל האזור כולו.</div>
+      </div>
+      <div class="image-card">
+        <img onclick="openModal(this.src)" src="assets/images/landmarks/us-capitol-burning-1814.jpg" alt="שריפת הקפיטול בשנת 1814" class="landmark-image">
+        <p class="credit">איור היסטורי בהשראת שריפת הקפיטול בשנת 1814 · נוצר בעזרת בינה מלאכותית · קובץ: us-capitol-burning-1814.jpg</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-card">
+    <h3 class="text-3xl font-bold text-white mb-6">מורשת היסטורית</h3>
+    <p class="text-lg text-slate-300">הקפיטול הוא המקום שבו מתקיימים דיוני חקיקה, נאומים היסטוריים, השבעות נשיאים וטקסים ממלכתיים. הוא מסמל את העיקרון שלפיו השלטון שואב את כוחו מן העם ומנציגיו.</p>
+    <p class="text-lg text-slate-300 mt-4">העובדה שהקפיטול שוקם לאחר השריפה הפכה אותו לסמל של המשכיות מוסדית ושל חוסן דמוקרטי.</p>
+  </section>
+</main>
+
+<footer class="bg-slate-950 text-slate-600 py-14 px-6 text-center border-t border-slate-900 mt-16"><p class="text-blue-400 font-bold tracking-widest uppercase mb-3">LIBERTY & HERITAGE PROJECT</p><p class="text-sm">מחקר היסטורי ועיצוב: מורשת ארה"ב | © 2026</p></footer>
+<div id="imageModal" onclick="closeModal()"><img id="modalImage" src="" alt="תמונה מוגדלת"></div><script>function openModal(src){document.getElementById('modalImage').src=src;document.getElementById('imageModal').style.display='flex'}function closeModal(){document.getElementById('imageModal').style.display='none'}</script>
+</body>
+</html>
