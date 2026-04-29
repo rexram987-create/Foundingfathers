@@ -6,8 +6,148 @@
   <title>ג'ון אדמס - מורשת ארה"ב</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800&family=Frank+Ruhl+Libre:wght@700&display=swap" rel="stylesheet">
-  <style>:root{--primary-blue:#3b82f6;--dark-bg:#020617;--card-bg:#0f172a}body{font-family:'Assistant',sans-serif;background:var(--dark-bg);color:#e2e8f0;margin:0;line-height:1.8}h1,h2,h3{font-family:'Frank Ruhl Libre',serif}.main-header{background:#0f172a;border-bottom:2px solid #1e293b;padding:2.5rem 1rem;text-align:center}.nav-container{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-top:1.5rem}.nav-link{padding:.8rem 1.5rem;font-weight:700;color:#94a3b8;border-radius:1rem;background:rgba(30,41,59,.5);border:1px solid #1e293b;text-decoration:none;transition:.3s}.nav-link:hover,.nav-link.active{color:white;background:var(--primary-blue);box-shadow:0 4px 15px rgba(59,130,246,.3)}.section-card{background:var(--card-bg);border:1px solid #1e293b;border-radius:2rem;padding:2rem;margin-bottom:2rem}.portrait{width:100%;max-height:620px;object-fit:cover;object-position:top;border-radius:2rem;border:1px solid #334155;cursor:zoom-in}.info-grid{display:grid;grid-template-columns:1fr;gap:1rem}@media(min-width:768px){.info-grid{grid-template-columns:repeat(2,1fr)}}.info-box{background:rgba(30,41,59,.55);border:1px solid #1e293b;border-radius:1.25rem;padding:1.25rem}#imageModal{display:none;position:fixed;inset:0;background:rgba(2,6,23,.97);z-index:2000;justify-content:center;align-items:center;padding:2rem}#imageModal img{max-width:95vw;max-height:90vh;border-radius:1rem}</style>
+  <style>
+    :root { --primary-blue:#3b82f6; --dark-bg:#020617; --card-bg:#0f172a; }
+    body { font-family:'Assistant',sans-serif; background:var(--dark-bg); color:#e2e8f0; margin:0; line-height:1.85; }
+    h1,h2,h3 { font-family:'Frank Ruhl Libre',serif; }
+    .main-header { background:#0f172a; border-bottom:2px solid #1e293b; padding:2.5rem 1rem; text-align:center; }
+    .nav-container { display:flex; flex-wrap:wrap; justify-content:center; gap:1rem; margin-top:1.5rem; }
+    .nav-link { padding:.8rem 1.5rem; font-weight:700; color:#94a3b8; border-radius:1rem; background:rgba(30,41,59,.5); border:1px solid #1e293b; text-decoration:none; transition:.3s; }
+    .nav-link:hover,.nav-link.active { color:white; background:var(--primary-blue); box-shadow:0 4px 15px rgba(59,130,246,.3); }
+    .section-card { background:var(--card-bg); border:1px solid #1e293b; border-radius:2rem; padding:2rem; margin-bottom:2rem; }
+    .portrait { width:100%; max-height:620px; object-fit:cover; object-position:top; border-radius:2rem; border:1px solid #334155; cursor:zoom-in; }
+    .info-grid { display:grid; grid-template-columns:1fr; gap:1rem; }
+    @media(min-width:768px){ .info-grid{ grid-template-columns:repeat(2,1fr);} }
+    .info-box { background:rgba(30,41,59,.55); border:1px solid #1e293b; border-radius:1.25rem; padding:1.25rem; }
+    .quote-box { background:rgba(59,130,246,.08); border-right:5px solid var(--primary-blue); border-radius:0 1rem 1rem 0; padding:1.5rem; color:#cbd5e1; font-style:italic; }
+    #imageModal { display:none; position:fixed; inset:0; background:rgba(2,6,23,.97); z-index:2000; justify-content:center; align-items:center; padding:2rem; }
+    #imageModal img { max-width:95vw; max-height:90vh; border-radius:1rem; }
+  </style>
 </head>
 <body>
-<header class="main-header"><div class="max-w-7xl mx-auto"><div class="flex justify-center items-center gap-4 mb-2"><div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center font-bold text-white text-lg">US</div><h1 class="text-3xl md:text-4xl font-bold text-white">מורשת ארה"ב</h1></div><nav class="nav-container"><a href="../index.html" class="nav-link">דף הבית</a><a href="../founders.html" class="nav-link active">אבות מייסדים</a><a href="../constitution.html" class="nav-link">חוקת ארה"ב</a><a href="../timeline.html" class="nav-link">ציר זמן</a><a href="../us-flag.html" class="nav-link">דגל ארה"ב</a><a href="../anthem.html" class="nav-link">ההמנון הלאומי</a><a href="../about.html" class="nav-link">קצת עליי</a></nav></div></header>
-<main class="max-w-6xl mx-auto px-6 py-14"><a href="../founders.html" class="text-blue-400 font-bold hover:text-blue-300">← חזרה לעמוד האבות המייסדים</a><section class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start mt-8 mb-12"><div><p class="text-blue-400 font-bold tracking-widest uppercase">האטלס של העצמאות והנשיא השני</p><h2 class="text-5xl md:text-7xl font-bold text-white mb-6">ג'ון אדמס</h2><p class="text-2xl text-slate-400 italic">John Adams</p><p class="text-xl text-slate-300 mt-6">עורך דין, מדינאי ודיפלומט, מן הדוחפים המרכזיים לעצמאות האמריקאית ואחד ממעצבי הרפובליקה בראשיתה.</p></div><img onclick="openModal(this.src)" src="https://i.postimg.cc/kVrGKMMf/Gilbert-Stuart-John-Adams-c-1800-1815-NGA-42933.jpg" alt="ג'ון אדמס" class="portrait"></section><section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">פרטים בסיסיים</h3><div class="info-grid"><div class="info-box"><strong class="text-blue-400">שם מלא:</strong> ג'ון אדמס / John Adams</div><div class="info-box"><strong class="text-blue-400">לידה:</strong> 30 באוקטובר 1735, בריינטרי, מסצ'וסטס</div><div class="info-box"><strong class="text-blue-400">פטירה:</strong> 4 ביולי 1826, קווינסי, מסצ'וסטס</div><div class="info-box"><strong class="text-blue-400">תפקידים מרכזיים:</strong> דיפלומט, סגן הנשיא הראשון, הנשיא השני</div></div></section><section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">אטימולוגיה ופירוק השם</h3><p><strong class="text-blue-400">John:</strong> מקורו בשם העברי יוחנן, שמשמעותו "האל חנן" או "האל העניק חסד".</p><p class="mt-4"><strong class="text-blue-400">Adams:</strong> שם משפחה פטרונימי, שמקורו בשם Adam, כלומר "בנו של אדם".</p></section><section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">ילדות, משפחה והשכלה</h3><p>אדמס גדל במסצ'וסטס במשפחה פוריטנית בעלת מסורת של עבודה קשה, השכלה ואחריות קהילתית. הוא למד בהרווארד והוסמך כעורך דין.</p></section><section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">תרומה למהפכה ולהקמת המדינה</h3><p>אדמס היה מן הדוברים התקיפים בעד עצמאות, סייע בקידום הכרזת העצמאות, שירת כדיפלומט חשוב באירופה, ותרם לעיצוב הממשל החוקתי במסצ'וסטס ובארצות הברית.</p></section><section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">מורשת היסטורית</h3><p>מורשתו של אדמס קשורה לשלטון החוק, לאחריות אזרחית, לדיפלומטיה ולאיזון בין חירות לבין יציבות שלטונית.</p></section></main><div id="imageModal" onclick="closeModal()"><img id="modalImage" src="" alt="תמונה מוגדלת"></div><script>function openModal(src){document.getElementById('modalImage').src=src;document.getElementById('imageModal').style.display='flex'}function closeModal(){document.getElementById('imageModal').style.display='none'}</script></body></html>
+<header class="main-header">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex justify-center items-center gap-4 mb-2">
+      <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center font-bold text-white text-lg">US</div>
+      <h1 class="text-3xl md:text-4xl font-bold text-white">מורשת ארה"ב</h1>
+    </div>
+    <nav class="nav-container">
+      <a href="../index.html" class="nav-link">דף הבית</a>
+      <a href="../founders-index.html" class="nav-link active">אבות מייסדים</a>
+      <a href="../constitution.html" class="nav-link">חוקת ארה"ב</a>
+      <a href="../timeline.html" class="nav-link">ציר זמן</a>
+      <a href="../us-flag.html" class="nav-link">דגל ארה"ב</a>
+      <a href="../anthem.html" class="nav-link">ההמנון הלאומי</a>
+      <a href="../about.html" class="nav-link">קצת עליי</a>
+    </nav>
+  </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-6 py-14">
+  <a href="../founders-index.html" class="text-blue-400 font-bold hover:text-blue-300">← חזרה לשער האבות המייסדים</a>
+
+  <section class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start mt-8 mb-12">
+    <div>
+      <p class="text-blue-400 font-bold tracking-widest uppercase">האטלס של העצמאות והנשיא השני</p>
+      <h2 class="text-5xl md:text-7xl font-bold text-white mb-6">ג'ון אדמס</h2>
+      <p class="text-2xl text-slate-400 italic">John Adams</p>
+      <p class="text-xl text-slate-300 mt-6">עורך דין, מדינאי ודיפלומט, מן הדוחפים המרכזיים לעצמאות האמריקאית ואחד ממעצבי הרפובליקה בראשיתה.</p>
+      <div class="quote-box mt-8">"אדמס היה מן האנשים שהבינו שהמהפכה אינה רק מלחמה נגד בריטניה, אלא בניית שיטה פוליטית הנשענת על חוק, מוסדות ואחריות אזרחית."</div>
+    </div>
+    <img onclick="openModal(this.src)" src="https://i.postimg.cc/kVrGKMMf/Gilbert-Stuart-John-Adams-c-1800-1815-NGA-42933.jpg" alt="ג'ון אדמס" class="portrait">
+  </section>
+
+  <section class="section-card">
+    <h3 class="text-3xl font-bold text-white mb-6">פרטים בסיסיים</h3>
+    <div class="info-grid">
+      <div class="info-box"><strong class="text-blue-400">שם מלא בעברית:</strong> ג'ון אדמס</div>
+      <div class="info-box"><strong class="text-blue-400">שם מלא באנגלית:</strong> John Adams</div>
+      <div class="info-box"><strong class="text-blue-400">לידה:</strong> 30 באוקטובר 1735, בריינטרי, כיום קווינסי, מסצ'וסטס</div>
+      <div class="info-box"><strong class="text-blue-400">פטירה:</strong> 4 ביולי 1826, קווינסי, מסצ'וסטס</div>
+      <div class="info-box"><strong class="text-blue-400">תפקידים מרכזיים:</strong> עורך דין, נציג בקונגרס הקונטיננטלי, דיפלומט, סגן הנשיא הראשון, הנשיא השני של ארצות הברית</div>
+      <div class="info-box"><strong class="text-blue-400">כינוי היסטורי:</strong> אטלס העצמאות</div>
+    </div>
+  </section>
+
+  <section class="section-card">
+    <h3 class="text-3xl font-bold text-white mb-6">אטימולוגיה ופירוק השם</h3>
+    <div class="space-y-5 text-lg text-slate-300">
+      <p><strong class="text-blue-400">John:</strong> מקורו בשם העברי <em>יוחנן</em>, שפירושו "האל חנן" או "האל העניק חסד". השם עבר דרך יוונית ולטינית אל שפות אירופה, והפך לאחד השמות הנפוצים ביותר בעולם הנוצרי והאנגלי.</p>
+      <p><strong class="text-blue-400">Adams:</strong> שם משפחה פטרונימי שמקורו בשם <em>Adam</em>, כלומר "בנו של אדם". השם Adam עצמו קשור למסורת המקראית ולמילה עברית קדומה הקשורה לאדמה או לאדם הראשון.</p>
+    </div>
+  </section>
+
+  <section class="section-card">
+    <h3 class="text-3xl font-bold text-white mb-6">ילדות ומשפחה</h3>
+    <p>אדמס נולד בבריינטרי שבמסצ'וסטס למשפחה פוריטנית בעלת מסורת של עבודה קשה, דתיות, אחריות קהילתית והשכלה. סביבתו החברתית הדגישה משמעת מוסרית, לימוד, עצמאות מחשבתית ושירות ציבורי — ערכים שילוו אותו לאורך כל חייו.</p>
+    <p class="mt-4">הוא נישא לאביגייל אדמס, אחת הדמויות המרשימות של התקופה, שהייתה שותפה אינטלקטואלית ופוליטית חשובה. מכתביהם הרבים משקפים זוגיות עמוקה, שיח רעיוני עשיר ותיעוד נדיר של תקופת המהפכה מבפנים. בנם, ג'ון קווינסי אדמס, יהיה לימים הנשיא השישי של ארצות הברית.</p>
+  </section>
+
+  <section class="section-card">
+    <h3 class="text-3xl font-bold text-white mb-6">השכלה והכשרה משפטית</h3>
+    <p>אדמס למד בהרווארד, ולאחר מכן הוכשר כעורך דין. השכלתו שילבה לימוד קלאסי, תיאולוגיה, משפט, היסטוריה ופילוסופיה פוליטית. הוא האמין שחירות אינה יכולה להתקיים בלי חוק, ושהחוק חייב לעמוד מעל התשוקה הפוליטית של ההמון ומעל כוחו של השלטון.</p>
+    <p class="mt-4">כאיש משפט, הוא התפרסם בזכות עקרונותיו. האירוע הבולט ביותר היה ייצוגם של החיילים הבריטים לאחר טבח בוסטון. אף שהדבר היה בלתי פופולרי, אדמס התעקש שגם אויבים פוליטיים זכאים למשפט הוגן. בכך הפגין את אמונתו העמוקה בשלטון החוק.</p>
+  </section>
+
+  <section class="section-card">
+    <h3 class="text-3xl font-bold text-white mb-6">פעילות לפני המהפכה</h3>
+    <p>בשנים שקדמו לעצמאות הפך אדמס לאחד הקולות המרכזיים נגד מדיניות המיסוי והכפייה הבריטית. הוא התנגד לרעיון שמושבות יכולות להיות מחויבות במסים בלא ייצוג פוליטי ממשי בפרלמנט הבריטי.</p>
+    <p class="mt-4">אדמס לא היה רק מסית או נואם; הוא היה בונה טיעונים. כוחו היה ביכולת להסביר מבחינה משפטית, מוסרית ופוליטית מדוע הקולוניות זכאיות לזכויותיהן ומדוע שלטון שאינו נשען על הסכמת הנמשלים מאבד את תוקפו.</p>
+  </section>
+
+  <section class="section-card">
+    <h3 class="text-3xl font-bold text-white mb-6">תרומתו למהפכה האמריקאית</h3>
+    <p>אדמס היה אחד הדוחפים העקביים ביותר להכרזת עצמאות. בקונגרס הקונטיננטלי הוא פעל מאחורי הקלעים ובחזית הדיון כדי לשכנע נציגים מתלבטים שהגיע הזמן להיפרד מבריטניה. הוא תמך בבחירת ג'ורג' וושינגטון למפקד הצבא הקונטיננטלי, מתוך הבנה שמנהיג מווירג'יניה יוכל לאחד את הצפון והדרום.</p>
+    <p class="mt-4">אדמס גם היה בין אלה שסייעו לקדם את תומאס ג'פרסון לתפקיד מחבר נוסח הצהרת העצמאות. אף שהוא עצמו היה הוגה ומנסח מוכשר, הוא הבין את חשיבות חלוקת התפקידים ואת הצורך במסמך שידבר אל כל המושבות.</p>
+  </section>
+
+  <section class="section-card">
+    <h3 class="text-3xl font-bold text-white mb-6">דיפלומטיה באירופה</h3>
+    <p>במהלך המהפכה ולאחריה שירת אדמס כדיפלומט באירופה. הוא פעל בצרפת, בהולנד ובבריטניה, וסייע להשיג הכרה, תמיכה כלכלית והסכמים חיוניים לארצות הברית הצעירה. אחד מהישגיו החשובים היה סיוע בגיוס הלוואות מהולנד, שסייעו לכלכלה האמריקאית בתקופה קשה.</p>
+    <p class="mt-4">הוא השתתף גם בתהליכים המדיניים שהובילו להסדרי השלום לאחר מלחמת העצמאות. פעילותו הדיפלומטית הוכיחה כי הקמת מדינה חדשה דורשת לא רק הכרזות אידאליסטיות, אלא גם כסף, בריתות, הסכמים ומעמד בינלאומי.</p>
+  </section>
+
+  <section class="section-card">
+    <h3 class="text-3xl font-bold text-white mb-6">חוקת מסצ'וסטס והשפעה חוקתית</h3>
+    <p>אחד מתרומותיו החשובות של אדמס למחשבה החוקתית הייתה כתיבת חוקת מסצ'וסטס בשנת 1780. מסמך זה נחשב לאחד הדגמים החשובים לממשל חוקתי במדינות האמריקאיות, והשפיע על רעיונות של הפרדת רשויות, שלטון חוק, אחריות מוסדית ומבנה רפובליקני.</p>
+    <p class="mt-4">עבור אדמס, החוקה לא הייתה רק מסמך טכני, אלא מנגנון להגבלת כוח ולשמירת חירות. הוא חשש מעריצות של מלכים, אך גם מעריצות של רוב בלתי מרוסן.</p>
+  </section>
+
+  <section class="section-card">
+    <h3 class="text-3xl font-bold text-white mb-6">סגן הנשיא הראשון והנשיא השני</h3>
+    <p>כאשר ג'ורג' וושינגטון נבחר לנשיא הראשון, אדמס נבחר לסגן הנשיא הראשון. הוא מצא את התפקיד מתסכל ולעיתים מוגבל, אך הוא סייע לעצב את מעמד סגן הנשיא בתוך המערכת החדשה.</p>
+    <p class="mt-4">כנשיא השני, אדמס נדרש להתמודד עם מתיחות קשה מול צרפת, מאבקים מפלגתיים חריפים, וראשית התגבשותן של מפלגות פוליטיות בארצות הברית. הישגו המרכזי היה שמירה על ארצות הברית מחוץ למלחמה רחבה עם צרפת, גם כאשר חלקים מן הציבור ומן המפלגה שלו דחפו לעימות.</p>
+  </section>
+
+  <section class="section-card">
+    <h3 class="text-3xl font-bold text-white mb-6">מחלוקות וביקורת היסטורית</h3>
+    <p>נשיאותו של אדמס הייתה שנויה במחלוקת, בעיקר בגלל חוקי הזרים וההסתה, שנתפסו כפגיעה חמורה בחופש הביטוי ובעיתונות. חוקים אלו פגעו במעמדו ההיסטורי, משום שהם עמדו במתח עם עקרונות החירות שאדמס עצמו קידם.</p>
+    <p class="mt-4">עם זאת, דמותו מורכבת: הוא היה רגיש לסכנות של אנרכיה ופילוג, ולעיתים העדיף יציבות וסדר על פני חירות ביטוי רחבה יותר. ההיסטוריונים רואים בו אדם עקרוני, אך גם עקשן, רגיש לביקורת ולעיתים קשה פוליטית.</p>
+  </section>
+
+  <section class="section-card">
+    <h3 class="text-3xl font-bold text-white mb-6">הקשר עם תומאס ג'פרסון</h3>
+    <p>מערכת היחסים בין אדמס לג'פרסון היא מן המרתקות בהיסטוריה האמריקאית. הם היו שותפים למהפכה ולחזון העצמאות, אך הפכו ליריבים פוליטיים חריפים בשנות התשעים של המאה ה־18. לאחר שנים של נתק, הם חידשו את הקשר במכתבים ארוכים שעסקו בזיכרון המהפכה, דת, פילוסופיה, פוליטיקה וזקנה.</p>
+    <p class="mt-4">שניהם מתו באותו יום — 4 ביולי 1826 — בדיוק חמישים שנה לאחר הכרזת העצמאות. העובדה הזו הפכה לסמל דרמטי של דור המייסדים ושל סיום תקופה היסטורית.</p>
+  </section>
+
+  <section class="section-card">
+    <h3 class="text-3xl font-bold text-white mb-6">מורשת היסטורית</h3>
+    <p>מורשתו של ג'ון אדמס קשורה לשלטון החוק, לאחריות אזרחית, דיפלומטיה, חשיבה חוקתית ואומץ מוסרי. הוא לא היה דמות כריזמטית כמו וושינגטון ולא סופר פוליטי מבריק כמו ג'פרסון, אך היה אחד מעמודי התווך האינטלקטואליים והמשפטיים של המהפכה.</p>
+    <p class="mt-4">אדמס מזכיר לנו שהקמת מדינה אינה נעשית רק בשדות הקרב או במסמכים חגיגיים, אלא גם באולמות משפט, בדיונים חוקתיים, במשא ומתן דיפלומטי ובהחלטות קשות שנועדו לשמור על הרפובליקה.</p>
+  </section>
+
+  <section class="section-card">
+    <h3 class="text-3xl font-bold text-white mb-6">ציטוט ומורשת רעיונית</h3>
+    <div class="quote-box">"אני חייב ללמוד פוליטיקה ומלחמה, כדי שבניי יוכלו ללמוד מתמטיקה ופילוסופיה."</div>
+    <p class="text-slate-400 mt-4">הציטוט מיוחס לאדמס ומבטא את תפיסתו כי דור המייסדים נושא בעול קשה כדי לאפשר לדורות הבאים חברה משכילה, חופשית ויציבה יותר.</p>
+  </section>
+</main>
+
+<div id="imageModal" onclick="closeModal()"><img id="modalImage" src="" alt="תמונה מוגדלת"></div>
+<script>
+function openModal(src){ document.getElementById('modalImage').src = src; document.getElementById('imageModal').style.display='flex'; }
+function closeModal(){ document.getElementById('imageModal').style.display='none'; }
+</script>
+</body>
+</html>
