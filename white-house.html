@@ -22,6 +22,7 @@
     .fact-grid { display:grid; grid-template-columns:1fr; gap:1rem; }
     @media(min-width:768px){ .fact-grid{ grid-template-columns:repeat(2,1fr);} }
     .fact-box { background:rgba(30,41,59,.55); border:1px solid #1e293b; border-radius:1.25rem; padding:1.25rem; }
+    .detail-box { background:rgba(30,41,59,.45); border-right:6px solid var(--primary-blue); padding:1.5rem; border-radius:0 1.25rem 1.25rem 0; margin-bottom:1.25rem; }
     .note-box { background:rgba(59,130,246,.1); border:1px solid rgba(59,130,246,.3); border-radius:1.5rem; padding:1.5rem; }
     #imageModal { display:none; position:fixed; inset:0; background:rgba(2,6,23,.97); z-index:2000; justify-content:center; align-items:center; padding:2rem; }
     #imageModal img { max-width:95vw; max-height:90vh; border-radius:1rem; }
@@ -31,76 +32,21 @@
 <header class="main-header">
   <div class="max-w-7xl mx-auto">
     <div class="flex justify-center items-center gap-4 mb-2"><div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center font-bold text-white text-lg">US</div><h1 class="text-3xl md:text-4xl font-bold text-white">מורשת ארה"ב</h1></div>
-    <nav class="nav-container">
-      <a href="index.html" class="nav-link">דף הבית</a>
-      <a href="founders-index.html" class="nav-link">אבות מייסדים</a>
-      <a href="constitution.html" class="nav-link">חוקת ארה"ב</a>
-      <a href="timeline.html" class="nav-link">ציר זמן</a>
-      <a href="us-flag.html" class="nav-link">דגל ארה"ב</a>
-      <a href="bald-eagle.html" class="nav-link">העיט האמריקאי</a>
-      <a href="great-seal.html" class="nav-link">החותם הגדול</a>
-      <a href="white-house.html" class="nav-link active">הבית הלבן</a>
-      <a href="us-capitol.html" class="nav-link">הקפיטול</a>
-      <a href="anthem.html" class="nav-link">ההמנון הלאומי</a>
-      <a href="about.html" class="nav-link">קצת עליי</a>
-    </nav>
+    <nav class="nav-container"><a href="index.html" class="nav-link">דף הבית</a><a href="founders-index.html" class="nav-link">אבות מייסדים</a><a href="constitution.html" class="nav-link">חוקת ארה"ב</a><a href="timeline.html" class="nav-link">ציר זמן</a><a href="us-flag.html" class="nav-link">דגל ארה"ב</a><a href="bald-eagle.html" class="nav-link">העיט האמריקאי</a><a href="great-seal.html" class="nav-link">החותם הגדול</a><a href="white-house.html" class="nav-link active">הבית הלבן</a><a href="us-capitol.html" class="nav-link">הקפיטול</a><a href="anthem.html" class="nav-link">ההמנון הלאומי</a><a href="about.html" class="nav-link">קצת עליי</a></nav>
   </div>
 </header>
-
-<section class="hero">
-  <p class="text-blue-300 font-bold tracking-widest uppercase mb-4">Seat of the Presidency</p>
-  <h2 class="text-5xl md:text-7xl font-bold text-white mb-6">הבית הלבן</h2>
-  <p class="text-2xl text-slate-300 italic">מעון הנשיא וסמל הרשות המבצעת של ארצות הברית</p>
-</section>
-
+<section class="hero"><p class="text-blue-300 font-bold tracking-widest uppercase mb-4">Seat of the Presidency</p><h2 class="text-5xl md:text-7xl font-bold text-white mb-6">הבית הלבן</h2><p class="text-2xl text-slate-300 italic">מעון הנשיא וסמל הרשות המבצעת של ארצות הברית</p></section>
 <main class="max-w-6xl mx-auto px-6 py-14">
   <section class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start mb-12">
-    <div class="section-card">
-      <h3 class="text-4xl font-bold text-white mb-6">מהו הבית הלבן?</h3>
-      <p class="text-xl text-slate-300">הבית הלבן הוא מעונו הרשמי ומשרדו המרכזי של נשיא ארצות הברית. הוא מייצג את הרשות המבצעת, את מוסד הנשיאות ואת ההמשכיות של השלטון האמריקאי.</p>
-      <p class="text-lg text-slate-300 mt-4">הבניין שוכן בוושינגטון הבירה, והוא הפך במשך השנים לאחד הסמלים המזוהים ביותר עם ארצות הברית בעולם.</p>
-    </div>
-    <div class="image-card">
-      <img onclick="openModal(this.src)" src="assets/images/landmarks/white-house-early-view.jpg" alt="הבית הלבן בתקופה מוקדמת" class="landmark-image">
-      <p class="credit">איור היסטורי בהשראת הבית הלבן בתקופה מוקדמת · נוצר בעזרת בינה מלאכותית · קובץ: white-house-early-view.jpg</p>
-    </div>
+    <div class="section-card"><h3 class="text-4xl font-bold text-white mb-6">מהו הבית הלבן?</h3><p class="text-xl text-slate-300">הבית הלבן הוא מעונו הרשמי ומשרדו המרכזי של נשיא ארצות הברית. הוא מייצג את הרשות המבצעת, את מוסד הנשיאות ואת ההמשכיות של השלטון האמריקאי.</p><p class="text-lg text-slate-300 mt-4">הבניין שוכן בוושינגטון הבירה, והוא הפך במשך השנים לאחד הסמלים המזוהים ביותר עם ארצות הברית בעולם.</p></div>
+    <div class="image-card"><img onclick="openModal(this.src)" src="assets/images/landmarks/white-house-early-view.jpg" alt="הבית הלבן בתקופה מוקדמת" class="landmark-image"><p class="credit">איור היסטורי בהשראת הבית הלבן בתקופה מוקדמת · נוצר בעזרת בינה מלאכותית · קובץ: white-house-early-view.jpg</p></div>
   </section>
-
-  <section class="section-card">
-    <h3 class="text-3xl font-bold text-white mb-6">פרטים בסיסיים</h3>
-    <div class="fact-grid">
-      <div class="fact-box"><strong class="text-blue-400">שם עברי:</strong> הבית הלבן</div>
-      <div class="fact-box"><strong class="text-blue-400">שם אנגלי:</strong> The White House</div>
-      <div class="fact-box"><strong class="text-blue-400">מיקום:</strong> וושינגטון הבירה</div>
-      <div class="fact-box"><strong class="text-blue-400">תפקיד:</strong> מעון ומשרד נשיא ארצות הברית</div>
-      <div class="fact-box"><strong class="text-blue-400">סמליות:</strong> הרשות המבצעת, הנשיאות והמשכיות השלטון</div>
-      <div class="fact-box"><strong class="text-blue-400">אירוע מכונן:</strong> שריפת הבית הלבן בשנת 1814</div>
-    </div>
-  </section>
-
-  <section class="section-card">
-    <h3 class="text-3xl font-bold text-white mb-6">שריפת הבית הלבן בשנת 1814</h3>
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-      <div>
-        <p class="text-lg text-slate-300">במהלך מלחמת 1812, לאחר קרב בלדנסבורג, נכנסו כוחות בריטיים לוושינגטון הבירה ושרפו מבני ממשל מרכזיים. בין המבנים שנפגעו היה גם בית הנשיא, שלימים ייקרא הבית הלבן.</p>
-        <p class="text-lg text-slate-300 mt-4">השריפה הפכה לאחד האירועים הדרמטיים בתולדות הבירה האמריקאית. היא סימלה את פגיעותה של הרפובליקה הצעירה, אך גם את יכולתה להשתקם ולבנות מחדש את מוסדותיה.</p>
-        <div class="note-box mt-6 text-slate-300"><strong class="text-blue-300">חשוב לדעת:</strong> זו לא הייתה שריפה של “הבית הלבן המודרני” כפי שאנו מכירים אותו כיום, אלא של בית הנשיא והמבנה הממשלתי בתקופתו.</div>
-      </div>
-      <div class="image-card">
-        <img onclick="openModal(this.src)" src="assets/images/landmarks/white-house-burning-1814.jpg" alt="שריפת הבית הלבן בשנת 1814" class="landmark-image">
-        <p class="credit">איור היסטורי בהשראת שריפת הבית הלבן בשנת 1814 · נוצר בעזרת בינה מלאכותית · קובץ: white-house-burning-1814.jpg</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-card">
-    <h3 class="text-3xl font-bold text-white mb-6">מורשת היסטורית</h3>
-    <p class="text-lg text-slate-300">הבית הלבן משמש לא רק כמבנה מגורים ומשרדים, אלא כבמה לסמכות הנשיאותית: חתימת חוקים, נאומים לאומה, קבלת מנהיגים זרים, משברים לאומיים ורגעים של פיוס.</p>
-    <p class="text-lg text-slate-300 mt-4">לאחר השריפה של 1814, שיקום המבנה סימל את עמידותה של ארצות הברית ואת חזרת הממשל לפעילות מתוך משבר.</p>
-  </section>
-</main>
-
-<footer class="bg-slate-950 text-slate-600 py-14 px-6 text-center border-t border-slate-900 mt-16"><p class="text-blue-400 font-bold tracking-widest uppercase mb-3">LIBERTY & HERITAGE PROJECT</p><p class="text-sm">מחקר היסטורי ועיצוב: מורשת ארה"ב | © 2026</p></footer>
-<div id="imageModal" onclick="closeModal()"><img id="modalImage" src="" alt="תמונה מוגדלת"></div><script>function openModal(src){document.getElementById('modalImage').src=src;document.getElementById('imageModal').style.display='flex'}function closeModal(){document.getElementById('imageModal').style.display='none'}</script>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">פרטים בסיסיים</h3><div class="fact-grid"><div class="fact-box"><strong class="text-blue-400">שם עברי:</strong> הבית הלבן</div><div class="fact-box"><strong class="text-blue-400">שם אנגלי:</strong> The White House</div><div class="fact-box"><strong class="text-blue-400">מיקום:</strong> 1600 Pennsylvania Avenue, וושינגטון הבירה</div><div class="fact-box"><strong class="text-blue-400">תפקיד:</strong> מעון ומשרד נשיא ארצות הברית</div><div class="fact-box"><strong class="text-blue-400">תחילת בנייה:</strong> 13 באוקטובר 1792</div><div class="fact-box"><strong class="text-blue-400">כניסה ראשונה:</strong> ג'ון ואביגייל אדמס, שנת 1800, כשהמבנה עדיין לא הושלם לגמרי</div></div></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">הוגה הרעיון, התכנון וסיבת הבנייה</h3><div class="detail-box"><h4 class="text-2xl font-bold text-white mb-3">הוגה הרעיון והיוזמים</h4><p class="text-slate-300">הרעיון לבית נשיא קבוע נולד מתוך הצורך להקים בירה פדרלית חדשה ומוסדות קבועים לרפובליקה. ג'ורג' וושינגטון בחר את האתר בשנת 1791, ובתחרות האדריכלית שנערכה בשנת 1792 נבחרה תוכניתו של האדריכל האירי־אמריקאי ג'יימס הובן.</p></div><div class="detail-box"><h4 class="text-2xl font-bold text-white mb-3">סיבת הבנייה</h4><p class="text-slate-300">המבנה נועד לשמש בית רשמי לנשיא, מקום עבודה לממשל המבצעי וסמל ממלכתי לרפובליקה החדשה. לא היה מדובר בארמון מלכותי, אלא בבית נשיאותי שנועד לשלב יוקרה, צניעות רפובליקנית ותפקוד ממשלי.</p></div><div class="detail-box"><h4 class="text-2xl font-bold text-white mb-3">משך הבנייה</h4><p class="text-slate-300">השלב הראשון נמשך כ־8 שנים, מ־1792 עד 1800. המבנה היה עדיין לא גמור כאשר משפחת אדמס נכנסה אליו. לאחר שריפת 1814 חזר ג'יימס הובן לפקח על השיקום, והבית נעשה ראוי למגורים מחדש בשנת 1817.</p></div></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">זהות הפועלים וחומרי הבנייה</h3><div class="detail-box"><h4 class="text-2xl font-bold text-white mb-3">מי בנה את הבית הלבן?</h4><p class="text-slate-300">הבית נבנה בידי כוח עבודה מעורב: בעלי מלאכה אירים וסקוטים, פועלים לבנים חופשיים, אפרו־אמריקאים חופשיים ופועלים משועבדים. פועלים משועבדים השתתפו כמעט בכל שלבי העבודה, כולל חציבת אבן, הובלה, ניסור, עבודות עץ ובנייה.</p></div><div class="detail-box"><h4 class="text-2xl font-bold text-white mb-3">חומרי בנייה</h4><p class="text-slate-300">החומר המזוהה ביותר עם המבנה המקורי היה אבן חול מאזור Aquia Creek בווירג'יניה. האבן נחצבה, הובלה בנהר הפוטומק, סותתה והונחה בידי בעלי מלאכה. בנוסף השתמשו בלבנים, עץ, ברזל, זכוכית וחומרי גמר מקומיים ומיובאים.</p></div></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">עלויות ומפרט טכני לתקופה</h3><div class="fact-grid"><div class="fact-box"><strong class="text-blue-400">עלות בנייה מקורית:</strong> כ־232,372 דולר היסטוריים</div><div class="fact-box"><strong class="text-blue-400">סגנון:</strong> נאו־קלאסי / פלדיאני בהשפעה אירית־בריטית</div><div class="fact-box"><strong class="text-blue-400">קומות בתכנון המעשי:</strong> שתי קומות עיקריות מעל מפלס שירותים/מרתף מוגבה</div><div class="fact-box"><strong class="text-blue-400">חזית:</strong> אבן חול צבועה/מסוידת להגנה ולמראה בהיר</div><div class="fact-box"><strong class="text-blue-400">תפקידים מקוריים:</strong> מגורי הנשיא, אירוח רשמי, משרדים וחללי שירות</div><div class="fact-box"><strong class="text-blue-400">מפרט מודרני ידוע:</strong> 132 חדרים, 35 חדרי רחצה ו־6 מפלסים במעון</div></div><p class="text-slate-400 mt-6">הערה: המפרט המודרני משקף את הבית הלבן לאחר הרחבות ושינויים רבים, ולא את המבנה המקורי לבדו.</p></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">שריפת הבית הלבן בשנת 1814</h3><div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start"><div><p class="text-lg text-slate-300">ב־24 באוגוסט 1814, במהלך מלחמת 1812 ולאחר קרב בלדנסבורג, נכנסו כוחות בריטיים לוושינגטון הבירה. הם העלו באש מבני ממשל מרכזיים, ובהם בית הנשיא והקפיטול.</p><p class="text-lg text-slate-300 mt-4">השריפה הרסה את פנים המבנה ופגעה קשות במעטפת. לאחר שהבריטים עזבו, ג'יימס הובן מונה לפקח על השיקום. הקירות והעיטורים מאבן שוחזרו, אך בפנים נעשו שינויים כדי להחזיר את המבנה לשימוש מהר יותר.</p><div class="note-box mt-6 text-slate-300"><strong class="text-blue-300">משמעות היסטורית:</strong> השריפה סימלה את פגיעותה של הרפובליקה הצעירה, והשיקום סימל עמידות לאומית וחזרה של הממשל לפעילות.</div></div><div class="image-card"><img onclick="openModal(this.src)" src="assets/images/landmarks/white-house-burning-1814.jpg" alt="שריפת הבית הלבן בשנת 1814" class="landmark-image"><p class="credit">איור היסטורי בהשראת שריפת הבית הלבן בשנת 1814 · נוצר בעזרת בינה מלאכותית · קובץ: white-house-burning-1814.jpg</p></div></div></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">מורשת היסטורית</h3><p class="text-lg text-slate-300">הבית הלבן משמש לא רק כמבנה מגורים ומשרדים, אלא כבמה לסמכות הנשיאותית: חתימת חוקים, נאומים לאומה, קבלת מנהיגים זרים, משברים לאומיים ורגעים של פיוס.</p><p class="text-lg text-slate-300 mt-4">לאחר השריפה של 1814, שיקום המבנה סימל את עמידותה של ארצות הברית ואת חזרת הממשל לפעילות מתוך משבר.</p></section>
+</main><footer class="bg-slate-950 text-slate-600 py-14 px-6 text-center border-t border-slate-900 mt-16"><p class="text-blue-400 font-bold tracking-widest uppercase mb-3">LIBERTY & HERITAGE PROJECT</p><p class="text-sm">מחקר היסטורי ועיצוב: מורשת ארה"ב | © 2026</p></footer><div id="imageModal" onclick="closeModal()"><img id="modalImage" src="" alt="תמונה מוגדלת"></div><script>function openModal(src){document.getElementById('modalImage').src=src;document.getElementById('imageModal').style.display='flex'}function closeModal(){document.getElementById('imageModal').style.display='none'}</script>
 </body>
 </html>
