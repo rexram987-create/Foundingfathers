@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>סמואל אדמס - מורשת ארה"ב</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800&family=Frank+Ruhl+Libre:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root { --primary-blue:#3b82f6; --dark-bg:#020617; --card-bg:#0f172a; }
+    body { font-family:'Assistant',sans-serif; background:var(--dark-bg); color:#e2e8f0; margin:0; line-height:1.85; }
+    h1,h2,h3 { font-family:'Frank Ruhl Libre',serif; }
+    .main-header { background:#0f172a; border-bottom:2px solid #1e293b; padding:2.5rem 1rem; text-align:center; }
+    .nav-container { display:flex; flex-wrap:wrap; justify-content:center; gap:1rem; margin-top:1.5rem; }
+    .nav-link { padding:.8rem 1.5rem; font-weight:700; color:#94a3b8; border-radius:1rem; background:rgba(30,41,59,.5); border:1px solid #1e293b; text-decoration:none; transition:.3s; }
+    .nav-link:hover,.nav-link.active { color:white; background:var(--primary-blue); box-shadow:0 4px 15px rgba(59,130,246,.3); }
+    .section-card { background:var(--card-bg); border:1px solid #1e293b; border-radius:2rem; padding:2rem; margin-bottom:2rem; }
+    .portrait { width:100%; max-height:620px; object-fit:cover; object-position:top; border-radius:2rem; border:1px solid #334155; cursor:zoom-in; }
+    .credit { color:#64748b; font-size:.85rem; margin-top:.75rem; }
+    .info-grid { display:grid; grid-template-columns:1fr; gap:1rem; }
+    @media(min-width:768px){ .info-grid{ grid-template-columns:repeat(2,1fr);} }
+    .info-box { background:rgba(30,41,59,.55); border:1px solid #1e293b; border-radius:1.25rem; padding:1.25rem; }
+    .quote-box { background:rgba(59,130,246,.08); border-right:5px solid var(--primary-blue); border-radius:0 1rem 1rem 0; padding:1.5rem; color:#cbd5e1; font-style:italic; }
+    .highlight-box { background:rgba(59,130,246,.1); border:1px solid rgba(59,130,246,.25); border-radius:1.5rem; padding:1.5rem; }
+    #imageModal { display:none; position:fixed; inset:0; background:rgba(2,6,23,.97); z-index:2000; justify-content:center; align-items:center; padding:2rem; }
+    #imageModal img { max-width:95vw; max-height:90vh; border-radius:1rem; }
+  </style>
+</head>
+<body>
+<header class="main-header">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex justify-center items-center gap-4 mb-2"><div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center font-bold text-white text-lg">US</div><h1 class="text-3xl md:text-4xl font-bold text-white">מורשת ארה"ב</h1></div>
+    <nav class="nav-container"><a href="../index.html" class="nav-link">דף הבית</a><a href="../founders-index.html" class="nav-link active">אבות מייסדים</a><a href="../constitution.html" class="nav-link">חוקת ארה"ב</a><a href="../timeline.html" class="nav-link">ציר זמן</a><a href="../us-flag.html" class="nav-link">דגל ארה"ב</a><a href="../anthem.html" class="nav-link">ההמנון הלאומי</a><a href="../about.html" class="nav-link">קצת עליי</a></nav>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-6 py-14">
+  <a href="../founders-index.html" class="text-blue-400 font-bold hover:text-blue-300">← חזרה לשער האבות המייסדים</a>
+  <section class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start mt-8 mb-12">
+    <div><p class="text-blue-400 font-bold tracking-widest uppercase">מנהיג מחאה ומהפכן פוליטי</p><h2 class="text-5xl md:text-7xl font-bold text-white mb-6">סמואל אדמס</h2><p class="text-2xl text-slate-400 italic">Samuel Adams</p><p class="text-xl text-slate-300 mt-6">מן הפעילים הבולטים בבוסטון לפני המהפכה, מארגן פוליטי, מחבר כרוזים ומי שסייע להפוך מחאה מקומית לתנועה בין־מושבתית רחבה.</p><div class="quote-box mt-8">"סמואל אדמס לא היה רק אדם שדיבר על חירות; הוא ידע כיצד לארגן אנשים, לבנות רשתות פעולה, ליצור תודעה ציבורית ולהפוך זעם מקומי למהפכה פוליטית."</div></div>
+    <div><img onclick="openModal(this.src)" src="../assets/images/founders/samuel-adams.jpg" alt="סמואל אדמס" class="portrait"><p class="credit">מקור התמונה: Wikimedia Commons · נחלת הכלל · צייר: John Singleton Copley · קובץ מקור: Samuel Adams by John Singleton Copley (cropped).jpg</p></div>
+  </section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">פרטים בסיסיים</h3><div class="info-grid"><div class="info-box"><strong class="text-blue-400">שם מלא בעברית:</strong> סמואל אדמס</div><div class="info-box"><strong class="text-blue-400">שם מלא באנגלית:</strong> Samuel Adams</div><div class="info-box"><strong class="text-blue-400">לידה:</strong> 27 בספטמבר 1722, בוסטון, מושבת מסצ'וסטס</div><div class="info-box"><strong class="text-blue-400">פטירה:</strong> 2 באוקטובר 1803, קיימברידג', מסצ'וסטס</div><div class="info-box"><strong class="text-blue-400">תפקידים מרכזיים:</strong> מנהיג מחאה, חבר בני החירות, חבר הקונגרס הקונטיננטלי, חותם על הצהרת העצמאות, מושל מסצ'וסטס</div><div class="info-box"><strong class="text-blue-400">כינוי היסטורי:</strong> אדריכל ההתנגדות העממית</div></div></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">אטימולוגיה ופירוק השם</h3><p><strong class="text-blue-400">Samuel:</strong> מן השם העברי <em>שמואל</em>. פירושו המקובל במסורת הוא "האל שמע" או "שם האל". השם עבר למסורת הנוצרית דרך המקרא והפך לשם נפוץ בעולם האנגלי־פרוטסטנטי.</p><p class="mt-4"><strong class="text-blue-400">Adams:</strong> שם משפחה פטרונימי שמקורו בשם <em>Adam</em>, כלומר "בנו של אדם". השם Adam קשור למסורת המקראית של האדם הראשון ולשורש קדום הקשור באדמה ובאנושות.</p></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">ילדות, משפחה והשכלה</h3><p>אדמס נולד בבוסטון למשפחה פוריטנית מבוססת ובעלת מעמד בקהילה. אביו היה איש עסקים ודמות פעילה בחיים הציבוריים המקומיים, וסביבתו הדגישה דתיות, מוסר, אחריות קהילתית וחשדנות כלפי כוח שלטוני מרוחק.</p><p class="mt-4">אדמס למד בהרווארד והתעניין בשאלות של חירות אזרחית, סמכות פוליטית ותיאוריה רפובליקנית. כוחו לא היה רק בלימוד תאורטי, אלא ביכולת להפוך רעיונות מופשטים — זכויות, חירות וייצוג — לשפה ציבורית שמובנת לתושבי בוסטון.</p></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">בוסטון והמחאה נגד בריטניה</h3><p>בשנות השישים והשבעים של המאה ה־18 הפכה בוסטון למרכז התנגדות לבריטניה, ואדמס היה אחד ממנועי ההתנגדות. הוא תקף את חוק הבולים, את חוקי טאונסנד ואת המדיניות הבריטית שנראתה בעיני המתיישבים כפגיעה בזכויותיהם.</p><p class="mt-4">הסיסמה "אין מיסוי ללא ייצוג" התאימה היטב לעולמו הפוליטי: מסים אינם רק עניין כספי, אלא מבחן לשאלה מי מחזיק בסמכות לשלוט ומי זכאי להסכמה פוליטית.</p></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">בני החירות וארגון ההתנגדות</h3><p>אדמס מזוהה עם בני החירות, רשת של פעילים שהתנגדה למדיניות הבריטית באמצעים ציבוריים, כלכליים ולעיתים גם אגרסיביים. הוא סייע להפוך מחאה מפוזרת לתנועה מאורגנת באמצעות כרוזים, אספות, חרמות, תעמולה ופיקוח חברתי על משתפי פעולה עם הבריטים.</p><div class="highlight-box mt-6"><strong class="text-blue-400">חשיבותו כמארגן:</strong> אדמס היה מומחה ביצירת לחץ ציבורי מתמשך — כזה שמכריח גם מתונים לבחור צד.</div></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">טבח בוסטון ומסיבת התה של בוסטון</h3><p>לאחר טבח בוסטון בשנת 1770 פעל אדמס להפוך את האירוע לסמל של עריצות בריטית. בעוד ג'ון אדמס הדגיש את שלטון החוק וייצג את החיילים הבריטים במשפט, סמואל אדמס התמקד בזירה הציבורית: זיכרון, מחאה, תעמולה ועיצוב דעת הקהל.</p><p class="mt-4">גם סביב מסיבת התה של בוסטון בשנת 1773 ניכרת חשיבותו כמי שסייע ליצור את האווירה הפוליטית שהפכה מחאה כלכלית לפעולה מהפכנית. תגובת בריטניה, חוקי הכפייה, דחפה מושבות נוספות להזדהות עם מסצ'וסטס.</p></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">ועדות ההתכתבות והפיכת המחאה לתנועה בין־מושבתית</h3><p>אחת מתרומותיו החשובות ביותר הייתה קידום ועדות ההתכתבות. ועדות אלו יצרו רשת תקשורת בין עיירות ומושבות, הפיצו מידע, תיאמו תגובות ובנו תחושת שותפות פוליטית רחבה.</p><p class="mt-4">לפני שהיה צבא מאוחד או ממשלה לאומית, היו רשתות של מכתבים, עיתונים, שליחים ואנשים שיצרו תודעה משותפת. אדמס היה מן האנשים שהבינו את כוחן של רשתות כאלה.</p></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">הקונגרס הקונטיננטלי והעצמאות</h3><p>אדמס היה נציג בקונגרס הקונטיננטלי ותמך בעצמאות. הוא לא היה מחבר מסמכים מבריק כמו ג'פרסון, ולא מפקד צבאי כמו וושינגטון, אך היה מן האנשים שדחפו את המושבות לנקודת הכרעה.</p><p class="mt-4">הוא חתם על הצהרת העצמאות ונשאר מזוהה עם הרעיון שהחירות אינה ניתנת כמתנה מלמעלה, אלא נשמרת באמצעות ערנות מתמדת של אזרחים.</p></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">אחרי המהפכה ומורשת היסטורית</h3><p>לאחר המהפכה המשיך אדמס בפוליטיקה של מסצ'וסטס וכיהן בסופו של דבר כמושל המדינה. הוא תמך ברפובליקניזם עממי, במעורבות אזרחית ובזהירות מפני ריכוז כוח.</p><p class="mt-4">מורשתו מדגישה את חשיבות החברה האזרחית, העיתונות, האספות המקומיות והיכולת של אזרחים מן השורה להשפיע על מהלך ההיסטוריה. במובן זה, הוא אחד האבות המייסדים של הפוליטיקה העממית האמריקאית.</p></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">מחלוקות וביקורת היסטורית</h3><p>סמואל אדמס זכה להערכה כמארגן מהפכני, אך גם לביקורת. מתנגדיו ראו בו מסית, מניפולטור של דעת קהל ואדם שהעדיף עימות על פני פשרה. קשה להבין את הדרך לעצמאות בלי תפקידם של אנשים מסוגו: מהפכות דורשות ארגון, תעמולה ורשתות פעולה.</p></section>
+  <section class="section-card"><h3 class="text-3xl font-bold text-white mb-6">ציטוט ומורשת רעיונית</h3><div class="quote-box">"איננו יכולים ליצור אירועים; תפקידנו הוא להשתמש בהם בתבונה."</div><p class="text-slate-400 mt-4">הציטוט מיוחס לאדמס ומבטא את דרך פעולתו הפוליטית: לזהות רגעים שבהם דעת קהל, עוול פוליטי וארגון נכון יכולים לשנות את הכיוון של אומה שלמה.</p></section>
+</main>
+<div id="imageModal" onclick="closeModal()"><img id="modalImage" src="" alt="תמונה מוגדלת"></div><script>function openModal(src){document.getElementById('modalImage').src=src;document.getElementById('imageModal').style.display='flex'}function closeModal(){document.getElementById('imageModal').style.display='none'}</script>
+</body>
+</html>
